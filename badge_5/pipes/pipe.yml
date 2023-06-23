@@ -1,0 +1,8 @@
+schema_name: airflow
+table_name: ed_pipeline_logs
+pipe_name: sendgrid_pipe
+stage_name: uni_kishore_pipeline
+s3_url: 's3://uni-kishore-pipeline'
+columns:
+  sendgrid_json: variant
+file_type: 'JSON'

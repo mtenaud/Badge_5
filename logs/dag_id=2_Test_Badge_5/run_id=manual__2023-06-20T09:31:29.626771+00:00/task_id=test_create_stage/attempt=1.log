@@ -1,0 +1,50 @@
+[2023-06-20T09:31:32.359+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-20T09:31:29.626771+00:00/task_id=test_create_stage permission to 509
+[2023-06-20T09:31:32.360+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-20T09:31:29.626771+00:00/task_id=test_create_stage permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-20T09:31:29.626771+00:00/task_id=test_create_stage'
+[2023-06-20T09:31:32.638+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-20T09:31:29.626771+00:00/task_id=test_create_stage permission to 509
+[2023-06-20T09:31:32.683+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-20T09:31:29.626771+00:00/task_id=test_create_stage permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-20T09:31:29.626771+00:00/task_id=test_create_stage'
+[2023-06-20T09:31:32.741+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5.test_create_stage manual__2023-06-20T09:31:29.626771+00:00 [queued]>
+[2023-06-20T09:31:32.755+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5.test_create_stage manual__2023-06-20T09:31:29.626771+00:00 [queued]>
+[2023-06-20T09:31:32.755+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-20T09:31:32.784+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): test_create_stage> on 2023-06-20 09:31:29.626771+00:00
+[2023-06-20T09:31:32.789+0000] {standard_task_runner.py:57} INFO - Started process 82 to run task
+[2023-06-20T09:31:32.795+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5', 'test_create_stage', 'manual__2023-06-20T09:31:29.626771+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpfrxjn6lp']
+[2023-06-20T09:31:32.799+0000] {standard_task_runner.py:85} INFO - Job 21: Subtask test_create_stage
+[2023-06-20T09:31:32.872+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-20T09:31:29.626771+00:00/task_id=test_create_stage permission to 509
+[2023-06-20T09:31:32.873+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-20T09:31:29.626771+00:00/task_id=test_create_stage permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-20T09:31:29.626771+00:00/task_id=test_create_stage'
+[2023-06-20T09:31:32.876+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5.test_create_stage manual__2023-06-20T09:31:29.626771+00:00 [running]> on host 3701b6a3ca22
+[2023-06-20T09:31:33.064+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5' AIRFLOW_CTX_TASK_ID='test_create_stage' AIRFLOW_CTX_EXECUTION_DATE='2023-06-20T09:31:29.626771+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-20T09:31:29.626771+00:00'
+[2023-06-20T09:31:33.067+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-20T09:31:33.068+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt run --models create_stage']
+[2023-06-20T09:31:33.082+0000] {subprocess.py:86} INFO - Output:
+[2023-06-20T09:31:36.351+0000] {subprocess.py:93} INFO - [0m09:31:36  Running with dbt=1.5.1
+[2023-06-20T09:31:37.889+0000] {subprocess.py:93} INFO - [0m09:31:37  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-06-20T09:31:37.890+0000] {subprocess.py:93} INFO - There are 1 unused configuration paths:
+[2023-06-20T09:31:37.891+0000] {subprocess.py:93} INFO - - models.badge_5.time_of_day
+[2023-06-20T09:31:37.932+0000] {subprocess.py:93} INFO - [0m09:31:37  Found 3 models, 4 tests, 0 snapshots, 0 analyses, 321 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-06-20T09:31:37.935+0000] {subprocess.py:93} INFO - [0m09:31:37
+[2023-06-20T09:31:39.640+0000] {subprocess.py:93} INFO - [0m09:31:39  Concurrency: 200 threads (target='dev')
+[2023-06-20T09:31:39.641+0000] {subprocess.py:93} INFO - [0m09:31:39
+[2023-06-20T09:31:39.707+0000] {subprocess.py:93} INFO - [0m09:31:39  1 of 1 START sql view model ***.create_stage ............................... [RUN]
+[2023-06-20T09:31:40.345+0000] {subprocess.py:93} INFO - [0m09:31:40  1 of 1 ERROR creating sql view model ***.create_stage ...................... [[31mERROR[0m in 0.63s]
+[2023-06-20T09:31:40.428+0000] {subprocess.py:93} INFO - [0m09:31:40
+[2023-06-20T09:31:40.429+0000] {subprocess.py:93} INFO - [0m09:31:40  Finished running 1 view model in 0 hours 0 minutes and 2.49 seconds (2.49s).
+[2023-06-20T09:31:40.519+0000] {subprocess.py:93} INFO - [0m09:31:40
+[2023-06-20T09:31:40.520+0000] {subprocess.py:93} INFO - [0m09:31:40  [31mCompleted with 1 error and 0 warnings:[0m
+[2023-06-20T09:31:40.521+0000] {subprocess.py:93} INFO - [0m09:31:40
+[2023-06-20T09:31:40.523+0000] {subprocess.py:93} INFO - [0m09:31:40  [33mDatabase Error in model create_stage (models/create_stage/create_stage.sql)[0m
+[2023-06-20T09:31:40.524+0000] {subprocess.py:93} INFO - [0m09:31:40    001003 (42000): SQL compilation error:
+[2023-06-20T09:31:40.525+0000] {subprocess.py:93} INFO - [0m09:31:40    syntax error line 4 at position 4 unexpected 'CREATE'.
+[2023-06-20T09:31:40.526+0000] {subprocess.py:93} INFO - [0m09:31:40    compiled Code at target/run/badge_5/models/create_stage/create_stage.sql
+[2023-06-20T09:31:40.527+0000] {subprocess.py:93} INFO - [0m09:31:40
+[2023-06-20T09:31:40.529+0000] {subprocess.py:93} INFO - [0m09:31:40  Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[2023-06-20T09:31:41.296+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-06-20T09:31:41.309+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-06-20T09:31:41.314+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5, task_id=test_create_stage, execution_date=20230620T093129, start_date=20230620T093132, end_date=20230620T093141
+[2023-06-20T09:31:41.330+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 21 for task test_create_stage (Bash command failed. The command returned a non-zero exit code 1.; 82)
+[2023-06-20T09:31:41.357+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-20T09:31:41.375+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check
