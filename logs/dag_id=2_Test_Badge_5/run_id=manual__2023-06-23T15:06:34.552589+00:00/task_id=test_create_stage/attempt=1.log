@@ -1,0 +1,41 @@
+[2023-06-23T15:06:36.440+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:06:34.552589+00:00/task_id=test_create_stage permission to 509
+[2023-06-23T15:06:36.442+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:06:34.552589+00:00/task_id=test_create_stage permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:06:34.552589+00:00/task_id=test_create_stage'
+[2023-06-23T15:06:36.466+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:06:34.552589+00:00/task_id=test_create_stage permission to 509
+[2023-06-23T15:06:36.467+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:06:34.552589+00:00/task_id=test_create_stage permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:06:34.552589+00:00/task_id=test_create_stage'
+[2023-06-23T15:06:36.629+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5.test_create_stage manual__2023-06-23T15:06:34.552589+00:00 [queued]>
+[2023-06-23T15:06:36.638+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5.test_create_stage manual__2023-06-23T15:06:34.552589+00:00 [queued]>
+[2023-06-23T15:06:36.638+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-23T15:06:36.654+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): test_create_stage> on 2023-06-23 15:06:34.552589+00:00
+[2023-06-23T15:06:36.659+0000] {standard_task_runner.py:57} INFO - Started process 110 to run task
+[2023-06-23T15:06:36.662+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5', 'test_create_stage', 'manual__2023-06-23T15:06:34.552589+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp4ok13a5l']
+[2023-06-23T15:06:36.664+0000] {standard_task_runner.py:85} INFO - Job 37: Subtask test_create_stage
+[2023-06-23T15:06:36.704+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:06:34.552589+00:00/task_id=test_create_stage permission to 509
+[2023-06-23T15:06:36.705+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:06:34.552589+00:00/task_id=test_create_stage permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:06:34.552589+00:00/task_id=test_create_stage'
+[2023-06-23T15:06:36.708+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5.test_create_stage manual__2023-06-23T15:06:34.552589+00:00 [running]> on host 9b03f6d5dc98
+[2023-06-23T15:06:36.813+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5' AIRFLOW_CTX_TASK_ID='test_create_stage' AIRFLOW_CTX_EXECUTION_DATE='2023-06-23T15:06:34.552589+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-23T15:06:34.552589+00:00'
+[2023-06-23T15:06:36.815+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-23T15:06:36.816+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt run --model ed_pipeline_logs']
+[2023-06-23T15:06:36.827+0000] {subprocess.py:86} INFO - Output:
+[2023-06-23T15:06:39.586+0000] {subprocess.py:93} INFO - [0m15:06:39  Running with dbt=1.5.1
+[2023-06-23T15:06:40.523+0000] {subprocess.py:93} INFO - [0m15:06:40  Unable to do partial parsing because profile has changed
+[2023-06-23T15:06:47.240+0000] {subprocess.py:93} INFO - [0m15:06:47  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-06-23T15:06:47.241+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2023-06-23T15:06:47.241+0000] {subprocess.py:93} INFO - - models.badge_5.create_stage
+[2023-06-23T15:06:47.241+0000] {subprocess.py:93} INFO - - models.badge_5.time_of_day
+[2023-06-23T15:06:47.272+0000] {subprocess.py:93} INFO - [0m15:06:47  Found 1 model, 0 tests, 0 snapshots, 0 analyses, 453 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-06-23T15:06:47.275+0000] {subprocess.py:93} INFO - [0m15:06:47
+[2023-06-23T15:06:48.768+0000] {subprocess.py:93} INFO - [0m15:06:48  Concurrency: 200 threads (target='dev')
+[2023-06-23T15:06:48.769+0000] {subprocess.py:93} INFO - [0m15:06:48
+[2023-06-23T15:06:48.826+0000] {subprocess.py:93} INFO - [0m15:06:48  1 of 1 START sql table model ***.ed_pipeline_logs .......................... [RUN]
+[2023-06-23T15:06:54.879+0000] {subprocess.py:93} INFO - [0m15:06:54  1 of 1 OK created sql table model ***.ed_pipeline_logs ..................... [[32mSUCCESS 1[0m in 6.05s]
+[2023-06-23T15:06:55.000+0000] {subprocess.py:93} INFO - [0m15:06:55
+[2023-06-23T15:06:55.001+0000] {subprocess.py:93} INFO - [0m15:06:55  Finished running 1 table model in 0 hours 0 minutes and 7.72 seconds (7.72s).
+[2023-06-23T15:06:55.072+0000] {subprocess.py:93} INFO - [0m15:06:55
+[2023-06-23T15:06:55.073+0000] {subprocess.py:93} INFO - [0m15:06:55  [32mCompleted successfully[0m
+[2023-06-23T15:06:55.075+0000] {subprocess.py:93} INFO - [0m15:06:55
+[2023-06-23T15:06:55.076+0000] {subprocess.py:93} INFO - [0m15:06:55  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2023-06-23T15:06:55.669+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-06-23T15:06:55.693+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=2_Test_Badge_5, task_id=test_create_stage, execution_date=20230623T150634, start_date=20230623T150636, end_date=20230623T150655
+[2023-06-23T15:06:55.746+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-23T15:06:55.763+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check
