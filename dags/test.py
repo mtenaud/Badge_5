@@ -16,7 +16,7 @@ with DAG('2_Test_Badge_5', default_args=default_args, schedule_interval='@once')
 
     task_test_stage = BashOperator(
         task_id='test_create_stage',
-        bash_command='cd /dbt && dbt run-operation create_stage --args \'{"stage_name": "uni_kishore_pipeline", "stage_url": "s3://uni-kishore-pipeline", "dry_run": false}\'',
+        bash_command='cd /dbt && dbt run-operation create_file_format --args \'{"file_format_name": "ff_json_logs", "file_format_type": "JSON", "strip_outer_array": true, "dry_run": false}\'',
         env={
             'dbt_user': '{{ var.value.dbt_user }}',
             'dbt_password': '{{ var.value.dbt_password }}',
@@ -26,3 +26,4 @@ with DAG('2_Test_Badge_5', default_args=default_args, schedule_interval='@once')
     )
 
 task_test_stage
+# dbt run-operation create_file_format --args '{"file_format_name": "ff_json_logs", "file_format_type": "\"JSON\"", "strip_outer_array": true}'

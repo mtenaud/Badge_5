@@ -1,0 +1,91 @@
+[2023-06-23T13:39:37.761+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T13:39:35.759740+00:00/task_id=test_create_stage permission to 509
+[2023-06-23T13:39:37.762+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T13:39:35.759740+00:00/task_id=test_create_stage permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T13:39:35.759740+00:00/task_id=test_create_stage'
+[2023-06-23T13:39:37.795+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T13:39:35.759740+00:00/task_id=test_create_stage permission to 509
+[2023-06-23T13:39:37.795+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T13:39:35.759740+00:00/task_id=test_create_stage permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T13:39:35.759740+00:00/task_id=test_create_stage'
+[2023-06-23T13:39:37.827+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5.test_create_stage manual__2023-06-23T13:39:35.759740+00:00 [queued]>
+[2023-06-23T13:39:37.833+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5.test_create_stage manual__2023-06-23T13:39:35.759740+00:00 [queued]>
+[2023-06-23T13:39:37.834+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-23T13:39:37.848+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): test_create_stage> on 2023-06-23 13:39:35.759740+00:00
+[2023-06-23T13:39:37.852+0000] {standard_task_runner.py:57} INFO - Started process 79 to run task
+[2023-06-23T13:39:37.856+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5', 'test_create_stage', 'manual__2023-06-23T13:39:35.759740+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpbgapyo75']
+[2023-06-23T13:39:37.858+0000] {standard_task_runner.py:85} INFO - Job 31: Subtask test_create_stage
+[2023-06-23T13:39:37.902+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T13:39:35.759740+00:00/task_id=test_create_stage permission to 509
+[2023-06-23T13:39:37.902+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T13:39:35.759740+00:00/task_id=test_create_stage permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T13:39:35.759740+00:00/task_id=test_create_stage'
+[2023-06-23T13:39:37.905+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5.test_create_stage manual__2023-06-23T13:39:35.759740+00:00 [running]> on host 468a28eb8092
+[2023-06-23T13:39:38.016+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5' AIRFLOW_CTX_TASK_ID='test_create_stage' AIRFLOW_CTX_EXECUTION_DATE='2023-06-23T13:39:35.759740+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-23T13:39:35.759740+00:00'
+[2023-06-23T13:39:38.018+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-23T13:39:38.020+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt run-operation create_file_format --args \'{"file_format_name": "ff_json_logs", "file_format_type": ""JSON"", "strip_outer_array": true, "dry_run":false}\'']
+[2023-06-23T13:39:38.028+0000] {subprocess.py:86} INFO - Output:
+[2023-06-23T13:39:40.999+0000] {subprocess.py:93} INFO - [0m13:39:40  The YAML provided in the --vars argument is not valid.
+[2023-06-23T13:39:41.006+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2023-06-23T13:39:41.006+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/clients/yaml_helper.py", line 56, in load_yaml_text
+[2023-06-23T13:39:41.007+0000] {subprocess.py:93} INFO -     return safe_load(contents)
+[2023-06-23T13:39:41.007+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/clients/yaml_helper.py", line 51, in safe_load
+[2023-06-23T13:39:41.008+0000] {subprocess.py:93} INFO -     return yaml.load(contents, Loader=SafeLoader)
+[2023-06-23T13:39:41.008+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/yaml/__init__.py", line 81, in load
+[2023-06-23T13:39:41.009+0000] {subprocess.py:93} INFO -     return loader.get_single_data()
+[2023-06-23T13:39:41.009+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/yaml/constructor.py", line 49, in get_single_data
+[2023-06-23T13:39:41.010+0000] {subprocess.py:93} INFO -     node = self.get_single_node()
+[2023-06-23T13:39:41.010+0000] {subprocess.py:93} INFO -   File "yaml/_yaml.pyx", line 673, in yaml._yaml.CParser.get_single_node
+[2023-06-23T13:39:41.011+0000] {subprocess.py:93} INFO -   File "yaml/_yaml.pyx", line 687, in yaml._yaml.CParser._compose_document
+[2023-06-23T13:39:41.011+0000] {subprocess.py:93} INFO -   File "yaml/_yaml.pyx", line 731, in yaml._yaml.CParser._compose_node
+[2023-06-23T13:39:41.012+0000] {subprocess.py:93} INFO -   File "yaml/_yaml.pyx", line 847, in yaml._yaml.CParser._compose_mapping_node
+[2023-06-23T13:39:41.012+0000] {subprocess.py:93} INFO -   File "yaml/_yaml.pyx", line 860, in yaml._yaml.CParser._parse_next_event
+[2023-06-23T13:39:41.013+0000] {subprocess.py:93} INFO - yaml.parser.ParserError: while parsing a flow mapping
+[2023-06-23T13:39:41.013+0000] {subprocess.py:93} INFO -   in "<unicode string>", line 1, column 1
+[2023-06-23T13:39:41.014+0000] {subprocess.py:93} INFO - did not find expected ',' or '}'
+[2023-06-23T13:39:41.014+0000] {subprocess.py:93} INFO -   in "<unicode string>", line 1, column 60
+[2023-06-23T13:39:41.015+0000] {subprocess.py:93} INFO - 
+[2023-06-23T13:39:41.015+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2023-06-23T13:39:41.016+0000] {subprocess.py:93} INFO - 
+[2023-06-23T13:39:41.016+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2023-06-23T13:39:41.017+0000] {subprocess.py:93} INFO -   File "/home/***/.local/bin/dbt", line 8, in <module>
+[2023-06-23T13:39:41.017+0000] {subprocess.py:93} INFO -     sys.exit(cli())
+[2023-06-23T13:39:41.017+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/click/core.py", line 1130, in __call__
+[2023-06-23T13:39:41.018+0000] {subprocess.py:93} INFO -     return self.main(*args, **kwargs)
+[2023-06-23T13:39:41.018+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/click/core.py", line 1055, in main
+[2023-06-23T13:39:41.019+0000] {subprocess.py:93} INFO -     rv = self.invoke(ctx)
+[2023-06-23T13:39:41.019+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/click/core.py", line 1655, in invoke
+[2023-06-23T13:39:41.020+0000] {subprocess.py:93} INFO -     sub_ctx = cmd.make_context(cmd_name, args, parent=ctx)
+[2023-06-23T13:39:41.020+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/click/core.py", line 920, in make_context
+[2023-06-23T13:39:41.021+0000] {subprocess.py:93} INFO -     self.parse_args(ctx, args)
+[2023-06-23T13:39:41.021+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/click/core.py", line 1378, in parse_args
+[2023-06-23T13:39:41.022+0000] {subprocess.py:93} INFO -     value, args = param.handle_parse_result(ctx, opts, args)
+[2023-06-23T13:39:41.022+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/click/core.py", line 2360, in handle_parse_result
+[2023-06-23T13:39:41.023+0000] {subprocess.py:93} INFO -     value = self.process_value(ctx, value)
+[2023-06-23T13:39:41.023+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/click/core.py", line 2316, in process_value
+[2023-06-23T13:39:41.024+0000] {subprocess.py:93} INFO -     value = self.type_cast_value(ctx, value)
+[2023-06-23T13:39:41.024+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/click/core.py", line 2304, in type_cast_value
+[2023-06-23T13:39:41.025+0000] {subprocess.py:93} INFO -     return convert(value)
+[2023-06-23T13:39:41.025+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/click/types.py", line 82, in __call__
+[2023-06-23T13:39:41.026+0000] {subprocess.py:93} INFO -     return self.convert(value, param, ctx)
+[2023-06-23T13:39:41.026+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/option_types.py", line 19, in convert
+[2023-06-23T13:39:41.027+0000] {subprocess.py:93} INFO -     return parse_cli_vars(value)
+[2023-06-23T13:39:41.027+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/config/utils.py", line 11, in parse_cli_vars
+[2023-06-23T13:39:41.028+0000] {subprocess.py:93} INFO -     return parse_cli_yaml_string(var_string, "vars")
+[2023-06-23T13:39:41.028+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/config/utils.py", line 16, in parse_cli_yaml_string
+[2023-06-23T13:39:41.029+0000] {subprocess.py:93} INFO -     cli_vars = yaml_helper.load_yaml_text(var_string)
+[2023-06-23T13:39:41.029+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/clients/yaml_helper.py", line 63, in load_yaml_text
+[2023-06-23T13:39:41.030+0000] {subprocess.py:93} INFO -     raise dbt.exceptions.DbtValidationError(error)
+[2023-06-23T13:39:41.031+0000] {subprocess.py:93} INFO - dbt.exceptions.DbtValidationError: Runtime Error
+[2023-06-23T13:39:41.031+0000] {subprocess.py:93} INFO -   Syntax error near line 1
+[2023-06-23T13:39:41.032+0000] {subprocess.py:93} INFO -   ------------------------------
+[2023-06-23T13:39:41.032+0000] {subprocess.py:93} INFO -   1  | {"file_format_name": "ff_json_logs", "file_format_type": ""JSON"", "strip_outer_array": true, "dry_run":false}
+[2023-06-23T13:39:41.033+0000] {subprocess.py:93} INFO - 
+[2023-06-23T13:39:41.033+0000] {subprocess.py:93} INFO -   Raw Error:
+[2023-06-23T13:39:41.034+0000] {subprocess.py:93} INFO -   ------------------------------
+[2023-06-23T13:39:41.034+0000] {subprocess.py:93} INFO -   while parsing a flow mapping
+[2023-06-23T13:39:41.034+0000] {subprocess.py:93} INFO -     in "<unicode string>", line 1, column 1
+[2023-06-23T13:39:41.035+0000] {subprocess.py:93} INFO -   did not find expected ',' or '}'
+[2023-06-23T13:39:41.035+0000] {subprocess.py:93} INFO -     in "<unicode string>", line 1, column 60
+[2023-06-23T13:39:41.163+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-06-23T13:39:41.173+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-06-23T13:39:41.177+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5, task_id=test_create_stage, execution_date=20230623T133935, start_date=20230623T133937, end_date=20230623T133941
+[2023-06-23T13:39:41.193+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 31 for task test_create_stage (Bash command failed. The command returned a non-zero exit code 1.; 79)
+[2023-06-23T13:39:41.237+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-23T13:39:41.255+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

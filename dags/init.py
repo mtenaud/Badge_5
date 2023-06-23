@@ -35,4 +35,15 @@ with DAG('1_Project_Badge_5', default_args=default_args, schedule_interval='@onc
         dag=dag
     )
 
-task_seed >> task_stage
+    task_file_format = BashOperator(
+        task_id='create_file_format',
+        bash_command='cd /dbt && dbt run-operation create_file_format --args \'{"file_format_name": "ff_json_logs", "file_format_type": "JSON", "strip_outer_array": true, "dry_run": false}\'',
+        env={
+            'dbt_user': '{{ var.value.dbt_user }}',
+            'dbt_password': '{{ var.value.dbt_password }}',
+            **os.environ
+        },
+        dag=dag
+    )
+
+task_stage >> task_file_format >> task_seed
