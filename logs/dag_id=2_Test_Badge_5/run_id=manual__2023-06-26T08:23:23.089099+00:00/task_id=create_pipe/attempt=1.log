@@ -1,0 +1,29 @@
+[2023-06-26T08:23:55.863+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T08:23:23.089099+00:00/task_id=create_pipe permission to 509
+[2023-06-26T08:23:55.865+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T08:23:23.089099+00:00/task_id=create_pipe permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T08:23:23.089099+00:00/task_id=create_pipe'
+[2023-06-26T08:23:55.896+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T08:23:23.089099+00:00/task_id=create_pipe permission to 509
+[2023-06-26T08:23:55.897+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T08:23:23.089099+00:00/task_id=create_pipe permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T08:23:23.089099+00:00/task_id=create_pipe'
+[2023-06-26T08:23:56.136+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5.create_pipe manual__2023-06-26T08:23:23.089099+00:00 [queued]>
+[2023-06-26T08:23:56.159+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5.create_pipe manual__2023-06-26T08:23:23.089099+00:00 [queued]>
+[2023-06-26T08:23:56.167+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-26T08:23:56.204+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): create_pipe> on 2023-06-26 08:23:23.089099+00:00
+[2023-06-26T08:23:56.213+0000] {standard_task_runner.py:57} INFO - Started process 609 to run task
+[2023-06-26T08:23:56.220+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5', 'create_pipe', 'manual__2023-06-26T08:23:23.089099+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp8x5chuwf']
+[2023-06-26T08:23:56.224+0000] {standard_task_runner.py:85} INFO - Job 70: Subtask create_pipe
+[2023-06-26T08:23:56.292+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T08:23:23.089099+00:00/task_id=create_pipe permission to 509
+[2023-06-26T08:23:56.293+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T08:23:23.089099+00:00/task_id=create_pipe permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T08:23:23.089099+00:00/task_id=create_pipe'
+[2023-06-26T08:23:56.296+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5.create_pipe manual__2023-06-26T08:23:23.089099+00:00 [running]> on host 4ceb01be110c
+[2023-06-26T08:23:56.481+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5' AIRFLOW_CTX_TASK_ID='create_pipe' AIRFLOW_CTX_EXECUTION_DATE='2023-06-26T08:23:23.089099+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-26T08:23:23.089099+00:00'
+[2023-06-26T08:23:56.483+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-26T08:23:56.484+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt &&             dbt run-operation create_pipe --args \'{            "pipe_name": "get_new_files",             "table_name": "ed_pipeline_logs",                 "dry_run": false}\'']
+[2023-06-26T08:23:56.496+0000] {subprocess.py:86} INFO - Output:
+[2023-06-26T08:23:59.520+0000] {subprocess.py:93} INFO - [0m08:23:59  Running with dbt=1.5.1
+[2023-06-26T08:24:05.249+0000] {subprocess.py:93} INFO - [0m08:24:05  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-06-26T08:24:05.250+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2023-06-26T08:24:05.250+0000] {subprocess.py:93} INFO - - models.badge_5.time_of_day
+[2023-06-26T08:24:05.251+0000] {subprocess.py:93} INFO - - models.badge_5.create_stage
+[2023-06-26T08:24:05.289+0000] {subprocess.py:93} INFO - [0m08:24:05  Found 2 models, 0 tests, 0 snapshots, 0 analyses, 455 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-06-26T08:24:08.750+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-06-26T08:24:08.776+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=2_Test_Badge_5, task_id=create_pipe, execution_date=20230626T082323, start_date=20230626T082356, end_date=20230626T082408
+[2023-06-26T08:24:08.856+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-26T08:24:08.874+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check

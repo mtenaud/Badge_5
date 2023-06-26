@@ -83,7 +83,23 @@ with DAG('2_Test_Badge_5', default_args=default_args, schedule_interval='@once')
         dag=dag
     )
 
+    task_stream = BashOperator(
+        task_id='create_stream',
+        bash_command='cd /dbt && \
+            dbt run-operation create_stream --args \'{\
+            "stream_name": "ed_cdc_stream", \
+            "table_name": "ed_pipeline_logs", \
+                "dry_run": false}\'',
+        env={
+            'dbt_user': '{{ var.value.dbt_user }}',
+            'dbt_password': '{{ var.value.dbt_password }}',
+            **os.environ
+        },
+        dag=dag
+    )
+
 task_stage >> task_ed_pipeline_logs
 task_file_format >> task_ed_pipeline_logs
 task_seed >> task_ed_pipeline_logs
 task_ed_pipeline_logs >> task_pipe
+task_pipe >> task_stream
