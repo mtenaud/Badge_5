@@ -1,0 +1,40 @@
+[2023-06-23T15:48:28.661+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:48:27.177341+00:00/task_id=load_seed_todl_once permission to 509
+[2023-06-23T15:48:28.662+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:48:27.177341+00:00/task_id=load_seed_todl_once permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:48:27.177341+00:00/task_id=load_seed_todl_once'
+[2023-06-23T15:48:28.691+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:48:27.177341+00:00/task_id=load_seed_todl_once permission to 509
+[2023-06-23T15:48:28.692+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:48:27.177341+00:00/task_id=load_seed_todl_once permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:48:27.177341+00:00/task_id=load_seed_todl_once'
+[2023-06-23T15:48:28.723+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5.load_seed_todl_once manual__2023-06-23T15:48:27.177341+00:00 [queued]>
+[2023-06-23T15:48:28.734+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5.load_seed_todl_once manual__2023-06-23T15:48:27.177341+00:00 [queued]>
+[2023-06-23T15:48:28.735+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-23T15:48:28.751+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): load_seed_todl_once> on 2023-06-23 15:48:27.177341+00:00
+[2023-06-23T15:48:28.756+0000] {standard_task_runner.py:57} INFO - Started process 660 to run task
+[2023-06-23T15:48:28.759+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5', 'load_seed_todl_once', 'manual__2023-06-23T15:48:27.177341+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp3rrgbbzh']
+[2023-06-23T15:48:28.763+0000] {standard_task_runner.py:85} INFO - Job 61: Subtask load_seed_todl_once
+[2023-06-23T15:48:28.809+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:48:27.177341+00:00/task_id=load_seed_todl_once permission to 509
+[2023-06-23T15:48:28.810+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:48:27.177341+00:00/task_id=load_seed_todl_once permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-23T15:48:27.177341+00:00/task_id=load_seed_todl_once'
+[2023-06-23T15:48:28.812+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5.load_seed_todl_once manual__2023-06-23T15:48:27.177341+00:00 [running]> on host 4ceb01be110c
+[2023-06-23T15:48:28.939+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5' AIRFLOW_CTX_TASK_ID='load_seed_todl_once' AIRFLOW_CTX_EXECUTION_DATE='2023-06-23T15:48:27.177341+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-23T15:48:27.177341+00:00'
+[2023-06-23T15:48:28.941+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-23T15:48:28.942+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt &&             dbt seed --profiles-dir .']
+[2023-06-23T15:48:28.951+0000] {subprocess.py:86} INFO - Output:
+[2023-06-23T15:48:32.246+0000] {subprocess.py:93} INFO - [0m15:48:32  Running with dbt=1.5.1
+[2023-06-23T15:48:34.980+0000] {subprocess.py:93} INFO - [0m15:48:34  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-06-23T15:48:34.980+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2023-06-23T15:48:34.981+0000] {subprocess.py:93} INFO - - models.badge_5.create_stage
+[2023-06-23T15:48:34.981+0000] {subprocess.py:93} INFO - - models.badge_5.time_of_day
+[2023-06-23T15:48:35.041+0000] {subprocess.py:93} INFO - [0m15:48:35  Found 1 model, 0 tests, 0 snapshots, 0 analyses, 454 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-06-23T15:48:35.045+0000] {subprocess.py:93} INFO - [0m15:48:35
+[2023-06-23T15:48:36.154+0000] {subprocess.py:93} INFO - [0m15:48:36  Concurrency: 200 threads (target='dev')
+[2023-06-23T15:48:36.155+0000] {subprocess.py:93} INFO - [0m15:48:36
+[2023-06-23T15:48:36.208+0000] {subprocess.py:93} INFO - [0m15:48:36  1 of 1 START seed file ***.time_of_day_lu .................................. [RUN]
+[2023-06-23T15:48:38.063+0000] {subprocess.py:93} INFO - [0m15:48:38  1 of 1 OK loaded seed file ***.time_of_day_lu .............................. [[32mINSERT 24[0m in 1.85s]
+[2023-06-23T15:48:38.135+0000] {subprocess.py:93} INFO - [0m15:48:38
+[2023-06-23T15:48:38.136+0000] {subprocess.py:93} INFO - [0m15:48:38  Finished running 1 seed in 0 hours 0 minutes and 3.09 seconds (3.09s).
+[2023-06-23T15:48:38.314+0000] {subprocess.py:93} INFO - [0m15:48:38
+[2023-06-23T15:48:38.316+0000] {subprocess.py:93} INFO - [0m15:48:38  [32mCompleted successfully[0m
+[2023-06-23T15:48:38.317+0000] {subprocess.py:93} INFO - [0m15:48:38
+[2023-06-23T15:48:38.319+0000] {subprocess.py:93} INFO - [0m15:48:38  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2023-06-23T15:48:38.965+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-06-23T15:48:38.989+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=2_Test_Badge_5, task_id=load_seed_todl_once, execution_date=20230623T154827, start_date=20230623T154828, end_date=20230623T154838
+[2023-06-23T15:48:39.014+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-23T15:48:39.038+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check
