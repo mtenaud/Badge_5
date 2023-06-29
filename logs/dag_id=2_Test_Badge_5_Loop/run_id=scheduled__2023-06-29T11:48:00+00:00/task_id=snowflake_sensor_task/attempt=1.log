@@ -1,0 +1,44 @@
+[2023-06-29T11:54:53.265+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-29T11:48:00+00:00/task_id=snowflake_sensor_task permission to 509
+[2023-06-29T11:54:53.266+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-29T11:48:00+00:00/task_id=snowflake_sensor_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-29T11:48:00+00:00/task_id=snowflake_sensor_task'
+[2023-06-29T11:54:53.302+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-29T11:48:00+00:00/task_id=snowflake_sensor_task permission to 509
+[2023-06-29T11:54:53.303+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-29T11:48:00+00:00/task_id=snowflake_sensor_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-29T11:48:00+00:00/task_id=snowflake_sensor_task'
+[2023-06-29T11:54:53.343+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.snowflake_sensor_task scheduled__2023-06-29T11:48:00+00:00 [queued]>
+[2023-06-29T11:54:53.355+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.snowflake_sensor_task scheduled__2023-06-29T11:48:00+00:00 [queued]>
+[2023-06-29T11:54:53.356+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-29T11:54:53.377+0000] {taskinstance.py:1327} INFO - Executing <Task(SnowflakeStreamSensor): snowflake_sensor_task> on 2023-06-29 11:48:00+00:00
+[2023-06-29T11:54:53.384+0000] {standard_task_runner.py:57} INFO - Started process 10278 to run task
+[2023-06-29T11:54:53.389+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Loop', 'snowflake_sensor_task', 'scheduled__2023-06-29T11:48:00+00:00', '--job-id', '746', '--raw', '--subdir', 'DAGS_FOLDER/test_loop.py', '--cfg-path', '/tmp/tmpeseves1p']
+[2023-06-29T11:54:53.390+0000] {standard_task_runner.py:85} INFO - Job 746: Subtask snowflake_sensor_task
+[2023-06-29T11:54:53.452+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-29T11:48:00+00:00/task_id=snowflake_sensor_task permission to 509
+[2023-06-29T11:54:53.453+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-29T11:48:00+00:00/task_id=snowflake_sensor_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-29T11:48:00+00:00/task_id=snowflake_sensor_task'
+[2023-06-29T11:54:53.456+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Loop.snowflake_sensor_task scheduled__2023-06-29T11:48:00+00:00 [running]> on host 4f3859432e6c
+[2023-06-29T11:54:53.572+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Loop' AIRFLOW_CTX_TASK_ID='snowflake_sensor_task' AIRFLOW_CTX_EXECUTION_DATE='2023-06-29T11:48:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-06-29T11:48:00+00:00'
+[2023-06-29T11:54:53.586+0000] {base.py:73} INFO - Using connection ID 'snowflake_connection' for task execution.
+[2023-06-29T11:54:53.591+0000] {connection.py:265} INFO - Snowflake Connector for Python Version: 2.4.5, Python Version: 3.7.16, Platform: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-debian-11.7
+[2023-06-29T11:54:53.592+0000] {connection.py:869} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2023-06-29T11:54:53.593+0000] {connection.py:886} INFO - Setting use_openssl_only mode to False
+[2023-06-29T11:54:54.154+0000] {cursor.py:609} INFO - query: [SELECT * FROM ed_cdc_stream]
+[2023-06-29T11:54:54.283+0000] {cursor.py:633} INFO - query execution done
+[2023-06-29T11:54:54.289+0000] {connection.py:506} INFO - closed
+[2023-06-29T11:54:54.333+0000] {connection.py:509} INFO - No async queries seem to be running, deleting session
+[2023-06-29T11:55:54.432+0000] {base.py:73} INFO - Using connection ID 'snowflake_connection' for task execution.
+[2023-06-29T11:55:54.434+0000] {connection.py:265} INFO - Snowflake Connector for Python Version: 2.4.5, Python Version: 3.7.16, Platform: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-debian-11.7
+[2023-06-29T11:55:54.435+0000] {connection.py:869} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2023-06-29T11:55:54.965+0000] {cursor.py:609} INFO - query: [SELECT * FROM ed_cdc_stream]
+[2023-06-29T11:55:55.128+0000] {cursor.py:633} INFO - query execution done
+[2023-06-29T11:55:55.129+0000] {connection.py:506} INFO - closed
+[2023-06-29T11:55:55.174+0000] {connection.py:509} INFO - No async queries seem to be running, deleting session
+[2023-06-29T11:56:55.353+0000] {base.py:73} INFO - Using connection ID 'snowflake_connection' for task execution.
+[2023-06-29T11:56:55.354+0000] {connection.py:265} INFO - Snowflake Connector for Python Version: 2.4.5, Python Version: 3.7.16, Platform: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-debian-11.7
+[2023-06-29T11:56:55.355+0000] {connection.py:869} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2023-06-29T11:56:55.809+0000] {cursor.py:609} INFO - query: [SELECT * FROM ed_cdc_stream]
+[2023-06-29T11:56:55.913+0000] {cursor.py:633} INFO - query execution done
+[2023-06-29T11:56:55.914+0000] {connection.py:506} INFO - closed
+[2023-06-29T11:56:55.954+0000] {connection.py:509} INFO - No async queries seem to be running, deleting session
+[2023-06-29T11:57:56.097+0000] {base.py:73} INFO - Using connection ID 'snowflake_connection' for task execution.
+[2023-06-29T11:57:56.098+0000] {connection.py:265} INFO - Snowflake Connector for Python Version: 2.4.5, Python Version: 3.7.16, Platform: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-debian-11.7
+[2023-06-29T11:57:56.099+0000] {connection.py:869} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2023-06-29T11:57:56.605+0000] {cursor.py:609} INFO - query: [SELECT * FROM ed_cdc_stream]
+[2023-06-29T11:57:56.700+0000] {cursor.py:633} INFO - query execution done
+[2023-06-29T11:57:56.701+0000] {connection.py:506} INFO - closed
+[2023-06-29T11:57:56.737+0000] {connection.py:509} INFO - No async queries seem to be running, deleting session

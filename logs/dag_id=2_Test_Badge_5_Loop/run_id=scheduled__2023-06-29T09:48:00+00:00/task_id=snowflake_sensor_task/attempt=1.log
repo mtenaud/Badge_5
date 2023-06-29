@@ -21,3 +21,42 @@
 [2023-06-29T09:53:17.748+0000] {cursor.py:633} INFO - query execution done
 [2023-06-29T09:53:17.749+0000] {connection.py:506} INFO - closed
 [2023-06-29T09:53:17.778+0000] {connection.py:509} INFO - No async queries seem to be running, deleting session
+[2023-06-29T09:54:17.983+0000] {base.py:73} INFO - Using connection ID 'snowflake_connection' for task execution.
+[2023-06-29T09:54:17.984+0000] {connection.py:265} INFO - Snowflake Connector for Python Version: 2.4.5, Python Version: 3.7.16, Platform: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-debian-11.7
+[2023-06-29T09:54:17.985+0000] {connection.py:869} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2023-06-29T09:54:18.480+0000] {cursor.py:609} INFO - query: [SELECT * FROM ed_cdc_stream]
+[2023-06-29T09:54:18.626+0000] {cursor.py:633} INFO - query execution done
+[2023-06-29T09:54:18.627+0000] {connection.py:506} INFO - closed
+[2023-06-29T09:54:18.656+0000] {connection.py:509} INFO - No async queries seem to be running, deleting session
+[2023-06-29T09:55:18.790+0000] {base.py:73} INFO - Using connection ID 'snowflake_connection' for task execution.
+[2023-06-29T09:55:18.791+0000] {connection.py:265} INFO - Snowflake Connector for Python Version: 2.4.5, Python Version: 3.7.16, Platform: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-debian-11.7
+[2023-06-29T09:55:18.791+0000] {connection.py:869} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2023-06-29T09:55:19.264+0000] {cursor.py:609} INFO - query: [SELECT * FROM ed_cdc_stream]
+[2023-06-29T09:55:19.357+0000] {cursor.py:633} INFO - query execution done
+[2023-06-29T09:55:19.359+0000] {connection.py:506} INFO - closed
+[2023-06-29T09:55:19.387+0000] {connection.py:509} INFO - No async queries seem to be running, deleting session
+[2023-06-29T09:56:19.548+0000] {base.py:73} INFO - Using connection ID 'snowflake_connection' for task execution.
+[2023-06-29T09:56:19.550+0000] {connection.py:265} INFO - Snowflake Connector for Python Version: 2.4.5, Python Version: 3.7.16, Platform: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-debian-11.7
+[2023-06-29T09:56:19.552+0000] {connection.py:869} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2023-06-29T09:56:20.005+0000] {cursor.py:609} INFO - query: [SELECT * FROM ed_cdc_stream]
+[2023-06-29T09:56:20.664+0000] {cursor.py:633} INFO - query execution done
+[2023-06-29T09:56:20.665+0000] {connection.py:506} INFO - closed
+[2023-06-29T09:56:20.700+0000] {connection.py:509} INFO - No async queries seem to be running, deleting session
+[2023-06-29T09:57:20.827+0000] {base.py:73} INFO - Using connection ID 'snowflake_connection' for task execution.
+[2023-06-29T09:57:20.828+0000] {connection.py:265} INFO - Snowflake Connector for Python Version: 2.4.5, Python Version: 3.7.16, Platform: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-debian-11.7
+[2023-06-29T09:57:20.828+0000] {connection.py:869} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2023-06-29T09:57:21.264+0000] {cursor.py:609} INFO - query: [SELECT * FROM ed_cdc_stream]
+[2023-06-29T09:57:21.378+0000] {cursor.py:633} INFO - query execution done
+[2023-06-29T09:57:21.379+0000] {connection.py:506} INFO - closed
+[2023-06-29T09:57:21.414+0000] {connection.py:509} INFO - No async queries seem to be running, deleting session
+[2023-06-29T09:58:22.159+0000] {base.py:73} INFO - Using connection ID 'snowflake_connection' for task execution.
+[2023-06-29T09:58:22.160+0000] {connection.py:265} INFO - Snowflake Connector for Python Version: 2.4.5, Python Version: 3.7.16, Platform: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-debian-11.7
+[2023-06-29T09:58:22.161+0000] {connection.py:869} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2023-06-29T09:58:22.661+0000] {cursor.py:609} INFO - query: [SELECT * FROM ed_cdc_stream]
+[2023-06-29T09:58:23.349+0000] {cursor.py:633} INFO - query execution done
+[2023-06-29T09:58:23.353+0000] {connection.py:506} INFO - closed
+[2023-06-29T09:58:23.393+0000] {connection.py:509} INFO - No async queries seem to be running, deleting session
+[2023-06-29T09:58:23.459+0000] {base.py:255} INFO - Success criteria met. Exiting.
+[2023-06-29T09:58:23.488+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=2_Test_Badge_5_Loop, task_id=snowflake_sensor_task, execution_date=20230629T094800, start_date=20230629T095316, end_date=20230629T095823
+[2023-06-29T09:58:23.528+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-29T09:58:23.558+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check

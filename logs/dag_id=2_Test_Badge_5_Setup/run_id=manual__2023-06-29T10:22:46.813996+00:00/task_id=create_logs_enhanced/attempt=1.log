@@ -1,0 +1,39 @@
+[2023-06-29T10:24:02.536+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-29T10:22:46.813996+00:00/task_id=create_logs_enhanced permission to 509
+[2023-06-29T10:24:02.537+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-29T10:22:46.813996+00:00/task_id=create_logs_enhanced permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-29T10:22:46.813996+00:00/task_id=create_logs_enhanced'
+[2023-06-29T10:24:02.568+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-29T10:22:46.813996+00:00/task_id=create_logs_enhanced permission to 509
+[2023-06-29T10:24:02.569+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-29T10:22:46.813996+00:00/task_id=create_logs_enhanced permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-29T10:22:46.813996+00:00/task_id=create_logs_enhanced'
+[2023-06-29T10:24:02.733+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Setup.create_logs_enhanced manual__2023-06-29T10:22:46.813996+00:00 [queued]>
+[2023-06-29T10:24:02.745+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Setup.create_logs_enhanced manual__2023-06-29T10:22:46.813996+00:00 [queued]>
+[2023-06-29T10:24:02.745+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-29T10:24:02.763+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): create_logs_enhanced> on 2023-06-29 10:22:46.813996+00:00
+[2023-06-29T10:24:02.768+0000] {standard_task_runner.py:57} INFO - Started process 1541 to run task
+[2023-06-29T10:24:02.772+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Setup', 'create_logs_enhanced', 'manual__2023-06-29T10:22:46.813996+00:00', '--job-id', '661', '--raw', '--subdir', 'DAGS_FOLDER/test_setup.py', '--cfg-path', '/tmp/tmp6u3qh6nw']
+[2023-06-29T10:24:02.774+0000] {standard_task_runner.py:85} INFO - Job 661: Subtask create_logs_enhanced
+[2023-06-29T10:24:02.821+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-29T10:22:46.813996+00:00/task_id=create_logs_enhanced permission to 509
+[2023-06-29T10:24:02.822+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-29T10:22:46.813996+00:00/task_id=create_logs_enhanced permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-29T10:22:46.813996+00:00/task_id=create_logs_enhanced'
+[2023-06-29T10:24:02.825+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Setup.create_logs_enhanced manual__2023-06-29T10:22:46.813996+00:00 [running]> on host 4f3859432e6c
+[2023-06-29T10:24:02.959+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Setup' AIRFLOW_CTX_TASK_ID='create_logs_enhanced' AIRFLOW_CTX_EXECUTION_DATE='2023-06-29T10:22:46.813996+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-29T10:22:46.813996+00:00'
+[2023-06-29T10:24:02.961+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-29T10:24:02.962+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt run --model logs_enhanced']
+[2023-06-29T10:24:02.972+0000] {subprocess.py:86} INFO - Output:
+[2023-06-29T10:24:07.595+0000] {subprocess.py:93} INFO - [0m10:24:07  Running with dbt=1.4.6
+[2023-06-29T10:24:13.905+0000] {subprocess.py:93} INFO - [0m10:24:13  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-06-29T10:24:13.906+0000] {subprocess.py:93} INFO - There are 1 unused configuration paths:
+[2023-06-29T10:24:13.906+0000] {subprocess.py:93} INFO - - models.badge_5.time_of_day_lu
+[2023-06-29T10:24:13.947+0000] {subprocess.py:93} INFO - [0m10:24:13  Found 3 models, 0 tests, 0 snapshots, 0 analyses, 442 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics
+[2023-06-29T10:24:13.950+0000] {subprocess.py:93} INFO - [0m10:24:13
+[2023-06-29T10:24:15.666+0000] {subprocess.py:93} INFO - [0m10:24:15  Concurrency: 200 threads (target='dev')
+[2023-06-29T10:24:15.668+0000] {subprocess.py:93} INFO - [0m10:24:15
+[2023-06-29T10:24:15.711+0000] {subprocess.py:93} INFO - [0m10:24:15  1 of 1 START sql table model ***.logs_enhanced ............................. [RUN]
+[2023-06-29T10:24:17.119+0000] {subprocess.py:93} INFO - [0m10:24:17  1 of 1 OK created sql table model ***.logs_enhanced ........................ [[32mSUCCESS 1[0m in 1.41s]
+[2023-06-29T10:24:17.177+0000] {subprocess.py:93} INFO - [0m10:24:17
+[2023-06-29T10:24:17.179+0000] {subprocess.py:93} INFO - [0m10:24:17  Finished running 1 table model in 0 hours 0 minutes and 3.23 seconds (3.23s).
+[2023-06-29T10:24:17.206+0000] {subprocess.py:93} INFO - [0m10:24:17
+[2023-06-29T10:24:17.207+0000] {subprocess.py:93} INFO - [0m10:24:17  [32mCompleted successfully[0m
+[2023-06-29T10:24:17.208+0000] {subprocess.py:93} INFO - [0m10:24:17
+[2023-06-29T10:24:17.210+0000] {subprocess.py:93} INFO - [0m10:24:17  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2023-06-29T10:24:17.975+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-06-29T10:24:18.004+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=2_Test_Badge_5_Setup, task_id=create_logs_enhanced, execution_date=20230629T102246, start_date=20230629T102402, end_date=20230629T102418
+[2023-06-29T10:24:18.038+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-29T10:24:18.070+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check

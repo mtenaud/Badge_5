@@ -3,6 +3,7 @@ from datetime import datetime
 
 from airflow import DAG
 from airflow.operators.bash import BashOperator
+from airflow.operators.empty import EmptyOperator
 from airflow.operators.dagrun_operator import TriggerDagRunOperator
 
 default_args = {
@@ -11,6 +12,11 @@ default_args = {
     'start_date': datetime(2023,6,27),
     'retries': 0
 }
+
+dag_setup = DAG('2_Test_Badge_5_Setup', 
+                default_args=default_args, 
+                start_date=default_args['start_date'],
+                schedule_interval='@once')
 
 def airflow_task_decorator(task_id, bash_command):
     def decorator(func):
@@ -28,7 +34,8 @@ def airflow_task_decorator(task_id, bash_command):
         return wrapper
     return decorator
 
-@airflow_task_decorator('load_seed_todl_once', 'cd /dbt && dbt seed --profiles-dir .')
+@airflow_task_decorator('load_seed_todl_once', 
+                        'cd /dbt && dbt seed --profiles-dir .')
 def task_seed(dag):
     pass
 
@@ -75,27 +82,26 @@ def task_stream(dag):
 def task_logs_enhanced(dag):
     pass
 
-
-dag_setup = DAG('2_Test_Badge_5_Setup', 
-                default_args=default_args, 
-                schedule_interval='@once', 
-                start_date=default_args['start_date'])
-
-seed = task_seed(dag_setup)
-stage = task_stage(dag_setup)
-file_format = task_file_format(dag_setup)
-ed_pipeline_logs = task_ed_pipeline_logs(dag_setup)
-pipe = task_pipe(dag_setup)
-stream = task_stream(dag_setup)
-logs_enhanced = task_logs_enhanced(dag_setup)
-
+begin = EmptyOperator(task_id="debut")
+to_seed = task_seed(dag_setup)
+create_stage = task_stage(dag_setup)
+create_file_format = task_file_format(dag_setup)
+create_ed_pipeline_logs = task_ed_pipeline_logs(dag_setup)
+create_pipe = task_pipe(dag_setup)
+create_stream = task_stream(dag_setup)
+create_logs_enhanced = task_logs_enhanced(dag_setup)
+dag_unpauser = BashOperator(
+                        task_id='unpause_dag',
+                        bash_command='airflow dags unpause 2_Test_Badge_5_Loop',
+                        dag = dag_setup)
 
 trigger_dag = TriggerDagRunOperator(
-    task_id='trigger_dag',
-    trigger_dag_id='2_Test_Badge_5_Loop',
-    dag=dag_setup,
-    execution_date="{{ execution_date + macros.timedelta(minutes=5) }}"
-)
+                        task_id='trigger_dag',
+                        trigger_dag_id='2_Test_Badge_5_Loop',
+                        dag=dag_setup,
+                        execution_date="{{ execution_date + macros.timedelta(minutes=5) }}")
 
-
-[stage, file_format, seed] >> ed_pipeline_logs >> pipe >> stream >> logs_enhanced >> trigger_dag
+begin >> [create_stage, create_file_format, to_seed]
+[create_stage, create_file_format] >> create_ed_pipeline_logs >> create_pipe >> create_stream 
+[create_stream , to_seed] >> create_logs_enhanced
+create_logs_enhanced >> dag_unpauser >> trigger_dag
