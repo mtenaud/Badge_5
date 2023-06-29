@@ -1,0 +1,21 @@
+[2023-06-27T14:55:36.868+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:54:13.718499+00:00/task_id=trigger_dag permission to 509
+[2023-06-27T14:55:36.870+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:54:13.718499+00:00/task_id=trigger_dag permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:54:13.718499+00:00/task_id=trigger_dag'
+[2023-06-27T14:55:36.910+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:54:13.718499+00:00/task_id=trigger_dag permission to 509
+[2023-06-27T14:55:36.911+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:54:13.718499+00:00/task_id=trigger_dag permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:54:13.718499+00:00/task_id=trigger_dag'
+[2023-06-27T14:55:37.148+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Setup.trigger_dag manual__2023-06-27T14:54:13.718499+00:00 [queued]>
+[2023-06-27T14:55:37.159+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Setup.trigger_dag manual__2023-06-27T14:54:13.718499+00:00 [queued]>
+[2023-06-27T14:55:37.159+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-27T14:55:37.177+0000] {taskinstance.py:1327} INFO - Executing <Task(TriggerDagRunOperator): trigger_dag> on 2023-06-27 14:54:13.718499+00:00
+[2023-06-27T14:55:37.183+0000] {standard_task_runner.py:57} INFO - Started process 6610 to run task
+[2023-06-27T14:55:37.187+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Setup', 'trigger_dag', 'manual__2023-06-27T14:54:13.718499+00:00', '--job-id', '352', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpi9al17k1']
+[2023-06-27T14:55:37.190+0000] {standard_task_runner.py:85} INFO - Job 352: Subtask trigger_dag
+[2023-06-27T14:55:37.238+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:54:13.718499+00:00/task_id=trigger_dag permission to 509
+[2023-06-27T14:55:37.239+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:54:13.718499+00:00/task_id=trigger_dag permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:54:13.718499+00:00/task_id=trigger_dag'
+[2023-06-27T14:55:37.241+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Setup.trigger_dag manual__2023-06-27T14:54:13.718499+00:00 [running]> on host eb22b15bae36
+[2023-06-27T14:55:37.295+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-06-27T14:55:37.338+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Setup' AIRFLOW_CTX_TASK_ID='trigger_dag' AIRFLOW_CTX_EXECUTION_DATE='2023-06-27T14:54:13.718499+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-27T14:54:13.718499+00:00'
+[2023-06-27T14:55:37.473+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=2_Test_Badge_5_Setup, task_id=trigger_dag, execution_date=20230627T145413, start_date=20230627T145537, end_date=20230627T145537
+[2023-06-27T14:55:37.521+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-27T14:55:37.538+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

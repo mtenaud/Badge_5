@@ -1,0 +1,61 @@
+[2023-06-26T11:26:47.259+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_stage permission to 509
+[2023-06-26T11:26:47.261+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_stage permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_stage'
+[2023-06-26T11:26:47.298+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_stage permission to 509
+[2023-06-26T11:26:47.299+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_stage permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_stage'
+[2023-06-26T11:26:47.577+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5.create_stage manual__2023-06-26T11:26:44.832823+00:00 [queued]>
+[2023-06-26T11:26:47.592+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5.create_stage manual__2023-06-26T11:26:44.832823+00:00 [queued]>
+[2023-06-26T11:26:47.593+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-26T11:26:47.634+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): create_stage> on 2023-06-26 11:26:44.832823+00:00
+[2023-06-26T11:26:47.644+0000] {standard_task_runner.py:57} INFO - Started process 76 to run task
+[2023-06-26T11:26:47.652+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5', 'create_stage', 'manual__2023-06-26T11:26:44.832823+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpr1kiqm72']
+[2023-06-26T11:26:47.656+0000] {standard_task_runner.py:85} INFO - Job 96: Subtask create_stage
+[2023-06-26T11:26:47.733+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_stage permission to 509
+[2023-06-26T11:26:47.734+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_stage permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_stage'
+[2023-06-26T11:26:47.737+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5.create_stage manual__2023-06-26T11:26:44.832823+00:00 [running]> on host dfc7c5882702
+[2023-06-26T11:26:47.957+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5' AIRFLOW_CTX_TASK_ID='create_stage' AIRFLOW_CTX_EXECUTION_DATE='2023-06-26T11:26:44.832823+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-26T11:26:44.832823+00:00'
+[2023-06-26T11:26:47.960+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-26T11:26:47.961+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt &&             dbt run-operation create_stage --args \'{            "stage_name": "uni_kishore_pipeline",             "stage_url": "s3://uni-kishore-pipeline",             "dry_run": false}\'']
+[2023-06-26T11:26:47.977+0000] {subprocess.py:86} INFO - Output:
+[2023-06-26T11:26:52.707+0000] {subprocess.py:93} INFO - [0m11:26:52  Running with dbt=1.5.1
+[2023-06-26T11:26:57.806+0000] {subprocess.py:93} INFO - [0m11:26:57  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-06-26T11:26:57.807+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2023-06-26T11:26:57.808+0000] {subprocess.py:93} INFO - - models.badge_5.create_stage
+[2023-06-26T11:26:57.809+0000] {subprocess.py:93} INFO - - models.badge_5.time_of_day
+[2023-06-26T11:26:57.870+0000] {subprocess.py:93} INFO - [0m11:26:57  Encountered an error:
+[2023-06-26T11:26:57.871+0000] {subprocess.py:93} INFO - Found a cycle: model.badge_5.logs_enhanced
+[2023-06-26T11:26:57.873+0000] {subprocess.py:93} INFO - [0m11:26:57  Traceback (most recent call last):
+[2023-06-26T11:26:57.874+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 86, in wrapper
+[2023-06-26T11:26:57.875+0000] {subprocess.py:93} INFO -     result, success = func(*args, **kwargs)
+[2023-06-26T11:26:57.876+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 71, in wrapper
+[2023-06-26T11:26:57.877+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:26:57.878+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 142, in wrapper
+[2023-06-26T11:26:57.878+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:26:57.879+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 168, in wrapper
+[2023-06-26T11:26:57.880+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:26:57.881+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 215, in wrapper
+[2023-06-26T11:26:57.882+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:26:57.883+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 250, in wrapper
+[2023-06-26T11:26:57.883+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:26:57.884+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/main.py", line 594, in run_operation
+[2023-06-26T11:26:57.885+0000] {subprocess.py:93} INFO -     results = task.run()
+[2023-06-26T11:26:57.886+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/task/run_operation.py", line 45, in run
+[2023-06-26T11:26:57.887+0000] {subprocess.py:93} INFO -     self.compile_manifest()
+[2023-06-26T11:26:57.888+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/task/base.py", line 173, in compile_manifest
+[2023-06-26T11:26:57.889+0000] {subprocess.py:93} INFO -     self.graph = compiler.compile(self.manifest)
+[2023-06-26T11:26:57.889+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/compilation.py", line 483, in compile
+[2023-06-26T11:26:57.890+0000] {subprocess.py:93} INFO -     self.link_graph(linker, manifest, add_test_edges)
+[2023-06-26T11:26:57.891+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/compilation.py", line 421, in link_graph
+[2023-06-26T11:26:57.892+0000] {subprocess.py:93} INFO -     raise RuntimeError("Found a cycle: {}".format(cycle))
+[2023-06-26T11:26:57.893+0000] {subprocess.py:93} INFO - RuntimeError: Found a cycle: model.badge_5.logs_enhanced
+[2023-06-26T11:26:57.893+0000] {subprocess.py:93} INFO - 
+[2023-06-26T11:26:58.626+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2023-06-26T11:26:58.650+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2023-06-26T11:26:58.656+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5, task_id=create_stage, execution_date=20230626T112644, start_date=20230626T112647, end_date=20230626T112658
+[2023-06-26T11:26:58.679+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 96 for task create_stage (Bash command failed. The command returned a non-zero exit code 2.; 76)
+[2023-06-26T11:26:58.728+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-26T11:26:58.766+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,79 @@
+[2023-06-28T14:05:04.908+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T14:00:00+00:00/task_id=snowflake_sensor_task permission to 509
+[2023-06-28T14:05:04.910+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T14:00:00+00:00/task_id=snowflake_sensor_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T14:00:00+00:00/task_id=snowflake_sensor_task'
+[2023-06-28T14:05:04.940+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T14:00:00+00:00/task_id=snowflake_sensor_task permission to 509
+[2023-06-28T14:05:04.942+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T14:00:00+00:00/task_id=snowflake_sensor_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T14:00:00+00:00/task_id=snowflake_sensor_task'
+[2023-06-28T14:05:04.973+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.snowflake_sensor_task scheduled__2023-06-28T14:00:00+00:00 [queued]>
+[2023-06-28T14:05:04.984+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.snowflake_sensor_task scheduled__2023-06-28T14:00:00+00:00 [queued]>
+[2023-06-28T14:05:04.985+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-28T14:05:05.000+0000] {taskinstance.py:1327} INFO - Executing <Task(SnowflakeStreamSensor): snowflake_sensor_task> on 2023-06-28 14:00:00+00:00
+[2023-06-28T14:05:05.005+0000] {standard_task_runner.py:57} INFO - Started process 121 to run task
+[2023-06-28T14:05:05.009+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Loop', 'snowflake_sensor_task', 'scheduled__2023-06-28T14:00:00+00:00', '--job-id', '517', '--raw', '--subdir', 'DAGS_FOLDER/test_loop.py', '--cfg-path', '/tmp/tmp477qs3ja']
+[2023-06-28T14:05:05.009+0000] {standard_task_runner.py:85} INFO - Job 517: Subtask snowflake_sensor_task
+[2023-06-28T14:05:05.052+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T14:00:00+00:00/task_id=snowflake_sensor_task permission to 509
+[2023-06-28T14:05:05.053+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T14:00:00+00:00/task_id=snowflake_sensor_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T14:00:00+00:00/task_id=snowflake_sensor_task'
+[2023-06-28T14:05:05.055+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Loop.snowflake_sensor_task scheduled__2023-06-28T14:00:00+00:00 [running]> on host 20abcf34034c
+[2023-06-28T14:05:05.141+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Loop' AIRFLOW_CTX_TASK_ID='snowflake_sensor_task' AIRFLOW_CTX_EXECUTION_DATE='2023-06-28T14:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-06-28T14:00:00+00:00'
+[2023-06-28T14:05:05.150+0000] {base.py:73} INFO - Using connection ID 'snowflake_connection' for task execution.
+[2023-06-28T14:05:05.154+0000] {connection.py:265} INFO - Snowflake Connector for Python Version: 2.4.5, Python Version: 3.7.16, Platform: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-debian-11.7
+[2023-06-28T14:05:05.155+0000] {connection.py:869} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2023-06-28T14:05:05.156+0000] {connection.py:886} INFO - Setting use_openssl_only mode to False
+[2023-06-28T14:07:20.752+0000] {network.py:806} ERROR - HTTP 403: Forbidden
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/network.py", line 769, in _request_exec_wrapper
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/network.py", line 1049, in _request_exec
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/network.py", line 958, in _request_exec
+    raise RetryRequest(exi)
+snowflake.connector.network.RetryRequest: HTTP 403: Forbidden
+[2023-06-28T14:07:20.757+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/network.py", line 769, in _request_exec_wrapper
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/network.py", line 1049, in _request_exec
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/network.py", line 958, in _request_exec
+    raise RetryRequest(exi)
+snowflake.connector.network.RetryRequest: HTTP 403: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/auth.py", line 246, in authenticate
+    socket_timeout=self._rest._connection.login_timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/network.py", line 638, in _post_request
+    _include_retry_params=_include_retry_params,
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/network.py", line 720, in fetch
+    session, method, full_url, headers, data, retry_ctx, **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/network.py", line 819, in _request_exec_wrapper
+    Error.errorhandler_wrapper_from_cause(conn, cause)
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/errors.py", line 227, in errorhandler_wrapper_from_cause
+    "done_format_msg": True,
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/errors.py", line 261, in errorhandler_wrapper
+    connection.errorhandler(connection, cursor, error_class, error_value)
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/errors.py", line 195, in default_errorhandler
+    cursor=cursor,
+snowflake.connector.errors.ForbiddenError: HTTP 403: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/airflow/dags/snowflake_sensor.py", line 30, in execute
+    snowflake_conn = SnowflakeConnection(**snowflake_conn_params)
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/connection.py", line 276, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/connection.py", line 491, in connect
+    self.__open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/connection.py", line 726, in __open_connection
+    self._authenticate(auth_instance)
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/connection.py", line 981, in _authenticate
+    self.__authenticate(self.__preprocess_auth_instance(auth_instance))
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/connection.py", line 1012, in __authenticate
+    session_parameters=self._session_parameters,
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/auth.py", line 259, in authenticate
+    sqlstate=SQLSTATE_CONNECTION_WAS_NOT_ESTABLISHED,
+snowflake.connector.errors.ForbiddenError: 250001 (08001): None: Failed to connect to DB. Verify the account name is correct: ipponpartner.snowflakecomputing.com:443. HTTP 403: Forbidden
+[2023-06-28T14:07:20.766+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5_Loop, task_id=snowflake_sensor_task, execution_date=20230628T140000, start_date=20230628T140504, end_date=20230628T140720
+[2023-06-28T14:07:20.780+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 517 for task snowflake_sensor_task (250001 (08001): None: Failed to connect to DB. Verify the account name is correct: ipponpartner.snowflakecomputing.com:443. HTTP 403: Forbidden; 121)
+[2023-06-28T14:07:20.823+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-28T14:07:20.886+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

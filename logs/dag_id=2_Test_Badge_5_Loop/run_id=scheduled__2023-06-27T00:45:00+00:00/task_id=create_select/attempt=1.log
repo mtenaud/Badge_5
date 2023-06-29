@@ -1,0 +1,199 @@
+[2023-06-27T08:41:25.950+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select permission to 509
+[2023-06-27T08:41:25.960+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select'
+[2023-06-27T08:41:26.159+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select permission to 509
+[2023-06-27T08:41:26.164+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select'
+[2023-06-27T08:41:27.052+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.create_select scheduled__2023-06-27T00:45:00+00:00 [queued]>
+[2023-06-27T08:41:27.106+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.create_select scheduled__2023-06-27T00:45:00+00:00 [queued]>
+[2023-06-27T08:41:27.132+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-27T08:41:27.469+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): create_select> on 2023-06-27 00:45:00+00:00
+[2023-06-27T08:41:27.483+0000] {standard_task_runner.py:57} INFO - Started process 867 to run task
+[2023-06-27T08:41:27.522+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Loop', 'create_select', 'scheduled__2023-06-27T00:45:00+00:00', '--job-id', '154', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp4wqtl1cp']
+[2023-06-27T08:41:27.539+0000] {standard_task_runner.py:85} INFO - Job 154: Subtask create_select
+[2023-06-27T08:41:27.794+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select permission to 509
+[2023-06-27T08:41:27.803+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select'
+[2023-06-27T08:41:27.816+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Loop.create_select scheduled__2023-06-27T00:45:00+00:00 [running]> on host 4d37da440d5c
+[2023-06-27T08:41:28.361+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Loop' AIRFLOW_CTX_TASK_ID='create_select' AIRFLOW_CTX_EXECUTION_DATE='2023-06-27T00:45:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-06-27T00:45:00+00:00'
+[2023-06-27T08:41:28.380+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-27T08:41:28.396+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt run --model select']
+[2023-06-27T08:41:28.541+0000] {subprocess.py:86} INFO - Output:
+[2023-06-27T08:41:43.073+0000] {subprocess.py:93} INFO - [0m08:41:43  Running with dbt=1.5.1
+[2023-06-27T08:41:59.554+0000] {subprocess.py:93} INFO - [0m08:41:59  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-06-27T08:41:59.555+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2023-06-27T08:41:59.557+0000] {subprocess.py:93} INFO - - models.badge_5.create_stage
+[2023-06-27T08:41:59.559+0000] {subprocess.py:93} INFO - - models.badge_5.time_of_day
+[2023-06-27T08:41:59.666+0000] {subprocess.py:93} INFO - [0m08:41:59  Found 2 models, 0 tests, 0 snapshots, 0 analyses, 455 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-06-27T08:41:59.675+0000] {subprocess.py:93} INFO - [0m08:41:59
+[2023-06-27T08:42:01.522+0000] {subprocess.py:93} INFO - [0m08:42:01  Concurrency: 200 threads (target='dev')
+[2023-06-27T08:42:01.524+0000] {subprocess.py:93} INFO - [0m08:42:01
+[2023-06-27T08:42:01.584+0000] {subprocess.py:93} INFO - [0m08:42:01  1 of 1 START sql view model ***.select ..................................... [RUN]
+[2023-06-27T08:42:02.120+0000] {subprocess.py:93} INFO - [0m08:42:02  1 of 1 ERROR creating sql view model ***.select ............................ [[31mERROR[0m in 0.53s]
+[2023-06-27T08:42:02.211+0000] {subprocess.py:93} INFO - [0m08:42:02
+[2023-06-27T08:42:02.214+0000] {subprocess.py:93} INFO - [0m08:42:02  Finished running 1 view model in 0 hours 0 minutes and 2.53 seconds (2.53s).
+[2023-06-27T08:42:02.291+0000] {subprocess.py:93} INFO - [0m08:42:02
+[2023-06-27T08:42:02.293+0000] {subprocess.py:93} INFO - [0m08:42:02  [31mCompleted with 1 error and 0 warnings:[0m
+[2023-06-27T08:42:02.295+0000] {subprocess.py:93} INFO - [0m08:42:02
+[2023-06-27T08:42:02.298+0000] {subprocess.py:93} INFO - [0m08:42:02  [33mDatabase Error in model select (models/select/select.sql)[0m
+[2023-06-27T08:42:02.300+0000] {subprocess.py:93} INFO - [0m08:42:02    001003 (42000): SQL compilation error:
+[2023-06-27T08:42:02.302+0000] {subprocess.py:93} INFO - [0m08:42:02    syntax error line 1 at position 43 unexpected '.'.
+[2023-06-27T08:42:02.304+0000] {subprocess.py:93} INFO - [0m08:42:02    compiled Code at target/run/badge_5/models/select/select.sql
+[2023-06-27T08:42:02.306+0000] {subprocess.py:93} INFO - [0m08:42:02
+[2023-06-27T08:42:02.309+0000] {subprocess.py:93} INFO - [0m08:42:02  Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[2023-06-27T08:42:03.158+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-06-27T08:42:03.178+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-06-27T08:42:03.183+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5_Loop, task_id=create_select, execution_date=20230627T004500, start_date=20230627T084127, end_date=20230627T084203
+[2023-06-27T08:42:03.204+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 154 for task create_select (Bash command failed. The command returned a non-zero exit code 1.; 867)
+[2023-06-27T08:42:03.238+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-27T08:42:03.264+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-06-27T08:54:41.286+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select permission to 509
+[2023-06-27T08:54:41.299+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select'
+[2023-06-27T08:54:41.438+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select permission to 509
+[2023-06-27T08:54:41.440+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select'
+[2023-06-27T08:54:41.581+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.create_select scheduled__2023-06-27T00:45:00+00:00 [queued]>
+[2023-06-27T08:54:43.059+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.create_select scheduled__2023-06-27T00:45:00+00:00 [queued]>
+[2023-06-27T08:54:43.064+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-27T08:54:43.116+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): create_select> on 2023-06-27 00:45:00+00:00
+[2023-06-27T08:54:43.139+0000] {standard_task_runner.py:57} INFO - Started process 8677 to run task
+[2023-06-27T08:54:43.185+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Loop', 'create_select', 'scheduled__2023-06-27T00:45:00+00:00', '--job-id', '192', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp9713l_xe']
+[2023-06-27T08:54:43.193+0000] {standard_task_runner.py:85} INFO - Job 192: Subtask create_select
+[2023-06-27T08:54:43.432+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select permission to 509
+[2023-06-27T08:54:43.435+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T00:45:00+00:00/task_id=create_select'
+[2023-06-27T08:54:43.464+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Loop.create_select scheduled__2023-06-27T00:45:00+00:00 [running]> on host 4d37da440d5c
+[2023-06-27T08:54:43.894+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Loop' AIRFLOW_CTX_TASK_ID='create_select' AIRFLOW_CTX_EXECUTION_DATE='2023-06-27T00:45:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-06-27T00:45:00+00:00'
+[2023-06-27T08:54:43.917+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-27T08:54:43.922+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt run --model select']
+[2023-06-27T08:54:43.965+0000] {subprocess.py:86} INFO - Output:
+[2023-06-27T08:54:54.154+0000] {subprocess.py:93} INFO - [0m08:54:54  Running with dbt=1.5.1
+[2023-06-27T08:55:11.214+0000] {job.py:216} ERROR - Job heartbeat got an exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "postgres" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/jobs/job.py", line 187, in heartbeat
+    session.merge(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 3062, in merge
+    _resolve_conflict_map=_resolve_conflict_map,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 3140, in _merge
+    options=options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2861, in get
+    execution_options=execution_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2979, in _get_impl
+    load_options=load_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/loading.py", line 534, in load_on_pk_identity
+    bind_arguments=bind_arguments,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2023-06-27T08:55:34.626+0000] {subprocess.py:93} INFO - [0m08:55:34  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-06-27T08:55:34.627+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2023-06-27T08:55:34.628+0000] {subprocess.py:93} INFO - - models.badge_5.create_stage
+[2023-06-27T08:55:34.631+0000] {subprocess.py:93} INFO - - models.badge_5.time_of_day
+[2023-06-27T08:55:34.730+0000] {subprocess.py:93} INFO - [0m08:55:34  Found 2 models, 0 tests, 0 snapshots, 0 analyses, 455 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-06-27T08:55:34.741+0000] {subprocess.py:93} INFO - [0m08:55:34
+[2023-06-27T08:55:36.438+0000] {subprocess.py:93} INFO - [0m08:55:36  Concurrency: 200 threads (target='dev')
+[2023-06-27T08:55:36.440+0000] {subprocess.py:93} INFO - [0m08:55:36
+[2023-06-27T08:55:36.525+0000] {subprocess.py:93} INFO - [0m08:55:36  1 of 1 START sql view model ***.select ..................................... [RUN]
+[2023-06-27T08:55:37.457+0000] {subprocess.py:93} INFO - [0m08:55:37  1 of 1 ERROR creating sql view model ***.select ............................ [[31mERROR[0m in 0.93s]
+[2023-06-27T08:55:37.552+0000] {subprocess.py:93} INFO - [0m08:55:37
+[2023-06-27T08:55:37.554+0000] {subprocess.py:93} INFO - [0m08:55:37  Finished running 1 view model in 0 hours 0 minutes and 2.81 seconds (2.81s).
+[2023-06-27T08:55:37.698+0000] {subprocess.py:93} INFO - [0m08:55:37
+[2023-06-27T08:55:37.710+0000] {subprocess.py:93} INFO - [0m08:55:37  [31mCompleted with 1 error and 0 warnings:[0m
+[2023-06-27T08:55:37.713+0000] {subprocess.py:93} INFO - [0m08:55:37
+[2023-06-27T08:55:37.725+0000] {subprocess.py:93} INFO - [0m08:55:37  [33mDatabase Error in model select (models/select/select.sql)[0m
+[2023-06-27T08:55:37.734+0000] {subprocess.py:93} INFO - [0m08:55:37    001003 (42000): SQL compilation error:
+[2023-06-27T08:55:37.741+0000] {subprocess.py:93} INFO - [0m08:55:37    syntax error line 1 at position 43 unexpected '.'.
+[2023-06-27T08:55:37.743+0000] {subprocess.py:93} INFO - [0m08:55:37    compiled Code at target/run/badge_5/models/select/select.sql
+[2023-06-27T08:55:37.754+0000] {subprocess.py:93} INFO - [0m08:55:37
+[2023-06-27T08:55:37.755+0000] {subprocess.py:93} INFO - [0m08:55:37  Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[2023-06-27T08:55:38.546+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-06-27T08:55:38.564+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-06-27T08:55:38.570+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5_Loop, task_id=create_select, execution_date=20230627T004500, start_date=20230627T085441, end_date=20230627T085538
+[2023-06-27T08:55:38.590+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 192 for task create_select (Bash command failed. The command returned a non-zero exit code 1.; 8677)
+[2023-06-27T08:55:38.663+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-27T08:55:38.678+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

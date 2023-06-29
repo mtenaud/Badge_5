@@ -1,0 +1,22 @@
+[2023-06-27T14:50:44.726+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=manual__2023-06-27T14:33:22.597494+00:00/task_id=choice permission to 509
+[2023-06-27T14:50:44.728+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=manual__2023-06-27T14:33:22.597494+00:00/task_id=choice permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=manual__2023-06-27T14:33:22.597494+00:00/task_id=choice'
+[2023-06-27T14:50:44.768+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=manual__2023-06-27T14:33:22.597494+00:00/task_id=choice permission to 509
+[2023-06-27T14:50:44.769+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=manual__2023-06-27T14:33:22.597494+00:00/task_id=choice permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=manual__2023-06-27T14:33:22.597494+00:00/task_id=choice'
+[2023-06-27T14:50:44.968+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.choice manual__2023-06-27T14:33:22.597494+00:00 [queued]>
+[2023-06-27T14:50:44.980+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.choice manual__2023-06-27T14:33:22.597494+00:00 [queued]>
+[2023-06-27T14:50:44.981+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-27T14:50:45.003+0000] {taskinstance.py:1327} INFO - Executing <Task(BranchPythonOperator): choice> on 2023-06-27 14:33:22.597494+00:00
+[2023-06-27T14:50:45.012+0000] {standard_task_runner.py:57} INFO - Started process 4256 to run task
+[2023-06-27T14:50:45.017+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Loop', 'choice', 'manual__2023-06-27T14:33:22.597494+00:00', '--job-id', '328', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmptkvsltwv']
+[2023-06-27T14:50:45.020+0000] {standard_task_runner.py:85} INFO - Job 328: Subtask choice
+[2023-06-27T14:50:45.081+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=manual__2023-06-27T14:33:22.597494+00:00/task_id=choice permission to 509
+[2023-06-27T14:50:45.082+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=manual__2023-06-27T14:33:22.597494+00:00/task_id=choice permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=manual__2023-06-27T14:33:22.597494+00:00/task_id=choice'
+[2023-06-27T14:50:45.086+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Loop.choice manual__2023-06-27T14:33:22.597494+00:00 [running]> on host eb22b15bae36
+[2023-06-27T14:50:45.206+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Loop' AIRFLOW_CTX_TASK_ID='choice' AIRFLOW_CTX_EXECUTION_DATE='2023-06-27T14:33:22.597494+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-27T14:33:22.597494+00:00'
+[2023-06-27T14:50:45.220+0000] {python.py:183} INFO - Done. Returned value was: create_select
+[2023-06-27T14:50:45.221+0000] {python.py:216} INFO - Branch callable return create_select
+[2023-06-27T14:50:45.222+0000] {skipmixin.py:161} INFO - Following branch create_select
+[2023-06-27T14:50:45.223+0000] {skipmixin.py:221} INFO - Skipping tasks ['skip']
+[2023-06-27T14:50:45.274+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=2_Test_Badge_5_Loop, task_id=choice, execution_date=20230627T143322, start_date=20230627T145044, end_date=20230627T145045
+[2023-06-27T14:50:45.309+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-27T14:50:45.354+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check

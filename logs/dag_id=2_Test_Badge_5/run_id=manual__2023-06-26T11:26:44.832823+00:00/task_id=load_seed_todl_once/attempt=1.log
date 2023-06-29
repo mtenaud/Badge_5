@@ -1,0 +1,65 @@
+[2023-06-26T11:26:47.257+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=load_seed_todl_once permission to 509
+[2023-06-26T11:26:47.258+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=load_seed_todl_once permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=load_seed_todl_once'
+[2023-06-26T11:26:47.296+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=load_seed_todl_once permission to 509
+[2023-06-26T11:26:47.297+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=load_seed_todl_once permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=load_seed_todl_once'
+[2023-06-26T11:26:47.568+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5.load_seed_todl_once manual__2023-06-26T11:26:44.832823+00:00 [queued]>
+[2023-06-26T11:26:47.583+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5.load_seed_todl_once manual__2023-06-26T11:26:44.832823+00:00 [queued]>
+[2023-06-26T11:26:47.584+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-26T11:26:47.612+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): load_seed_todl_once> on 2023-06-26 11:26:44.832823+00:00
+[2023-06-26T11:26:47.620+0000] {standard_task_runner.py:57} INFO - Started process 74 to run task
+[2023-06-26T11:26:47.626+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5', 'load_seed_todl_once', 'manual__2023-06-26T11:26:44.832823+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpl7vsvko7']
+[2023-06-26T11:26:47.631+0000] {standard_task_runner.py:85} INFO - Job 95: Subtask load_seed_todl_once
+[2023-06-26T11:26:47.711+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=load_seed_todl_once permission to 509
+[2023-06-26T11:26:47.712+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=load_seed_todl_once permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=load_seed_todl_once'
+[2023-06-26T11:26:47.716+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5.load_seed_todl_once manual__2023-06-26T11:26:44.832823+00:00 [running]> on host dfc7c5882702
+[2023-06-26T11:26:47.921+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5' AIRFLOW_CTX_TASK_ID='load_seed_todl_once' AIRFLOW_CTX_EXECUTION_DATE='2023-06-26T11:26:44.832823+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-26T11:26:44.832823+00:00'
+[2023-06-26T11:26:47.925+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-26T11:26:47.927+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt &&             dbt seed --profiles-dir .']
+[2023-06-26T11:26:47.947+0000] {subprocess.py:86} INFO - Output:
+[2023-06-26T11:26:52.705+0000] {subprocess.py:93} INFO - [0m11:26:52  Running with dbt=1.5.1
+[2023-06-26T11:26:57.904+0000] {subprocess.py:93} INFO - [0m11:26:57  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-06-26T11:26:57.905+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2023-06-26T11:26:57.905+0000] {subprocess.py:93} INFO - - models.badge_5.create_stage
+[2023-06-26T11:26:57.906+0000] {subprocess.py:93} INFO - - models.badge_5.time_of_day
+[2023-06-26T11:26:57.952+0000] {subprocess.py:93} INFO - [0m11:26:57  Encountered an error:
+[2023-06-26T11:26:57.952+0000] {subprocess.py:93} INFO - Found a cycle: model.badge_5.logs_enhanced
+[2023-06-26T11:26:57.955+0000] {subprocess.py:93} INFO - [0m11:26:57  Traceback (most recent call last):
+[2023-06-26T11:26:57.956+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 86, in wrapper
+[2023-06-26T11:26:57.956+0000] {subprocess.py:93} INFO -     result, success = func(*args, **kwargs)
+[2023-06-26T11:26:57.957+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 71, in wrapper
+[2023-06-26T11:26:57.958+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:26:57.959+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 142, in wrapper
+[2023-06-26T11:26:57.959+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:26:57.960+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 168, in wrapper
+[2023-06-26T11:26:57.961+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:26:57.962+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 215, in wrapper
+[2023-06-26T11:26:57.962+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:26:57.963+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 250, in wrapper
+[2023-06-26T11:26:57.964+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:26:57.965+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/main.py", line 630, in seed
+[2023-06-26T11:26:57.965+0000] {subprocess.py:93} INFO -     results = task.run()
+[2023-06-26T11:26:57.966+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/task/runnable.py", line 423, in run
+[2023-06-26T11:26:57.967+0000] {subprocess.py:93} INFO -     self._runtime_initialize()
+[2023-06-26T11:26:57.967+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/task/compile.py", line 140, in _runtime_initialize
+[2023-06-26T11:26:57.968+0000] {subprocess.py:93} INFO -     super()._runtime_initialize()
+[2023-06-26T11:26:57.968+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/task/runnable.py", line 131, in _runtime_initialize
+[2023-06-26T11:26:57.969+0000] {subprocess.py:93} INFO -     self.compile_manifest()
+[2023-06-26T11:26:57.970+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/task/base.py", line 173, in compile_manifest
+[2023-06-26T11:26:57.971+0000] {subprocess.py:93} INFO -     self.graph = compiler.compile(self.manifest)
+[2023-06-26T11:26:57.971+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/compilation.py", line 483, in compile
+[2023-06-26T11:26:57.972+0000] {subprocess.py:93} INFO -     self.link_graph(linker, manifest, add_test_edges)
+[2023-06-26T11:26:57.973+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/compilation.py", line 421, in link_graph
+[2023-06-26T11:26:57.973+0000] {subprocess.py:93} INFO -     raise RuntimeError("Found a cycle: {}".format(cycle))
+[2023-06-26T11:26:57.974+0000] {subprocess.py:93} INFO - RuntimeError: Found a cycle: model.badge_5.logs_enhanced
+[2023-06-26T11:26:57.975+0000] {subprocess.py:93} INFO - 
+[2023-06-26T11:26:58.718+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2023-06-26T11:26:58.733+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2023-06-26T11:26:58.739+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5, task_id=load_seed_todl_once, execution_date=20230626T112644, start_date=20230626T112647, end_date=20230626T112658
+[2023-06-26T11:26:58.756+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 95 for task load_seed_todl_once (Bash command failed. The command returned a non-zero exit code 2.; 74)
+[2023-06-26T11:26:58.776+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-26T11:26:58.834+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

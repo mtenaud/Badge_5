@@ -1,0 +1,162 @@
+[2023-06-27T08:42:15.662+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T02:25:00+00:00/task_id=create_select permission to 509
+[2023-06-27T08:42:15.689+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T02:25:00+00:00/task_id=create_select permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T02:25:00+00:00/task_id=create_select'
+[2023-06-27T08:42:15.796+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T02:25:00+00:00/task_id=create_select permission to 509
+[2023-06-27T08:42:15.798+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T02:25:00+00:00/task_id=create_select permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T02:25:00+00:00/task_id=create_select'
+[2023-06-27T08:42:17.556+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.create_select scheduled__2023-06-27T02:25:00+00:00 [queued]>
+[2023-06-27T08:42:17.577+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.create_select scheduled__2023-06-27T02:25:00+00:00 [queued]>
+[2023-06-27T08:42:17.580+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-27T08:42:17.639+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): create_select> on 2023-06-27 02:25:00+00:00
+[2023-06-27T08:42:17.660+0000] {standard_task_runner.py:57} INFO - Started process 4487 to run task
+[2023-06-27T08:42:17.673+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Loop', 'create_select', 'scheduled__2023-06-27T02:25:00+00:00', '--job-id', '171', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpfwc4mtnb']
+[2023-06-27T08:42:17.679+0000] {standard_task_runner.py:85} INFO - Job 171: Subtask create_select
+[2023-06-27T08:42:17.846+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T02:25:00+00:00/task_id=create_select permission to 509
+[2023-06-27T08:42:17.847+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T02:25:00+00:00/task_id=create_select permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T02:25:00+00:00/task_id=create_select'
+[2023-06-27T08:42:17.855+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Loop.create_select scheduled__2023-06-27T02:25:00+00:00 [running]> on host 4d37da440d5c
+[2023-06-27T08:42:18.246+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Loop' AIRFLOW_CTX_TASK_ID='create_select' AIRFLOW_CTX_EXECUTION_DATE='2023-06-27T02:25:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-06-27T02:25:00+00:00'
+[2023-06-27T08:42:18.252+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-27T08:42:18.265+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt run --model select']
+[2023-06-27T08:42:18.321+0000] {subprocess.py:86} INFO - Output:
+[2023-06-27T08:42:48.845+0000] {job.py:216} ERROR - Job heartbeat got an exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "postgres" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/jobs/job.py", line 187, in heartbeat
+    session.merge(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 3062, in merge
+    _resolve_conflict_map=_resolve_conflict_map,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 3140, in _merge
+    options=options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2861, in get
+    execution_options=execution_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2979, in _get_impl
+    load_options=load_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/loading.py", line 534, in load_on_pk_identity
+    bind_arguments=bind_arguments,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2023-06-27T08:43:03.886+0000] {subprocess.py:93} INFO - [0m08:43:03  Running with dbt=1.5.1
+[2023-06-27T08:43:26.016+0000] {subprocess.py:93} INFO - [0m08:43:26  Encountered an error:
+[2023-06-27T08:43:26.018+0000] {subprocess.py:93} INFO - [Errno 12] Cannot allocate memory: '/dbt/seeds/.gitkeep'
+[2023-06-27T08:43:26.041+0000] {subprocess.py:93} INFO - [0m08:43:26  Traceback (most recent call last):
+[2023-06-27T08:43:26.043+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 86, in wrapper
+[2023-06-27T08:43:26.045+0000] {subprocess.py:93} INFO -     result, success = func(*args, **kwargs)
+[2023-06-27T08:43:26.050+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 71, in wrapper
+[2023-06-27T08:43:26.052+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-27T08:43:26.055+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 142, in wrapper
+[2023-06-27T08:43:26.059+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-27T08:43:26.062+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 168, in wrapper
+[2023-06-27T08:43:26.064+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-27T08:43:26.066+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 215, in wrapper
+[2023-06-27T08:43:26.075+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-27T08:43:26.078+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 243, in wrapper
+[2023-06-27T08:43:26.082+0000] {subprocess.py:93} INFO -     runtime_config, write_perf_info=write_perf_info
+[2023-06-27T08:43:26.086+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 227, in get_full_manifest
+[2023-06-27T08:43:26.089+0000] {subprocess.py:93} INFO -     manifest = loader.load()
+[2023-06-27T08:43:26.090+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 273, in load
+[2023-06-27T08:43:26.091+0000] {subprocess.py:93} INFO -     file_reader.read_files()
+[2023-06-27T08:43:26.093+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/parser/read_files.py", line 193, in read_files
+[2023-06-27T08:43:26.094+0000] {subprocess.py:93} INFO -     self.read_files_for_project(project, file_types)
+[2023-06-27T08:43:26.097+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/parser/read_files.py", line 206, in read_files_for_project
+[2023-06-27T08:43:26.100+0000] {subprocess.py:93} INFO -     dbt_ignore_spec,
+[2023-06-27T08:43:26.104+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/parser/read_files.py", line 158, in read_files_for_parser
+[2023-06-27T08:43:26.106+0000] {subprocess.py:93} INFO -     project, dirs, extension, parse_ft, saved_files, ignore_spec
+[2023-06-27T08:43:26.108+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/parser/read_files.py", line 133, in get_source_files
+[2023-06-27T08:43:26.111+0000] {subprocess.py:93} INFO -     fp_list = filesystem_search(project, paths, extension, ignore_spec)
+[2023-06-27T08:43:26.112+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/parser/search.py", line 74, in filesystem_search
+[2023-06-27T08:43:26.114+0000] {subprocess.py:93} INFO -     for result in find_matching(root, relative_dirs, ext, ignore_spec):
+[2023-06-27T08:43:26.117+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/clients/system.py", line 79, in find_matching
+[2023-06-27T08:43:26.118+0000] {subprocess.py:93} INFO -     modification_time = os.path.getmtime(absolute_path)
+[2023-06-27T08:43:26.120+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.7/genericpath.py", line 55, in getmtime
+[2023-06-27T08:43:26.122+0000] {subprocess.py:93} INFO -     return os.stat(filename).st_mtime
+[2023-06-27T08:43:26.124+0000] {subprocess.py:93} INFO - OSError: [Errno 12] Cannot allocate memory: '/dbt/seeds/.gitkeep'
+[2023-06-27T08:43:26.125+0000] {subprocess.py:93} INFO - 
+[2023-06-27T08:43:27.295+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2023-06-27T08:43:27.324+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2023-06-27T08:43:27.338+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5_Loop, task_id=create_select, execution_date=20230627T022500, start_date=20230627T084217, end_date=20230627T084327
+[2023-06-27T08:43:27.425+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 171 for task create_select (Bash command failed. The command returned a non-zero exit code 2.; 4487)
+[2023-06-27T08:43:27.503+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-27T08:43:27.539+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

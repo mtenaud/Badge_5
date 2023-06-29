@@ -1,7 +1,7 @@
 {% macro create_pipe(pipe_name, table_name, schema_name = target.schema, db_name = target.database, dry_run = True) %}
 
     {% set sql %}
-        CREATE PIPE {{ db_name }}.{{ schema_name }}.{{pipe_name}}
+        CREATE or replace PIPE {{ db_name }}.{{ schema_name }}.{{pipe_name}}
         auto_ingest=true
         aws_sns_topic='arn:aws:sns:us-west-2:321463406630:dngw_topic'
         AS 

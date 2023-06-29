@@ -1,0 +1,39 @@
+[2023-06-28T10:25:08.562+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T10:20:00+00:00/task_id=snowflake_sensor_task permission to 509
+[2023-06-28T10:25:08.565+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T10:20:00+00:00/task_id=snowflake_sensor_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T10:20:00+00:00/task_id=snowflake_sensor_task'
+[2023-06-28T10:25:08.655+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T10:20:00+00:00/task_id=snowflake_sensor_task permission to 509
+[2023-06-28T10:25:08.656+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T10:20:00+00:00/task_id=snowflake_sensor_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T10:20:00+00:00/task_id=snowflake_sensor_task'
+[2023-06-28T10:25:08.748+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.snowflake_sensor_task scheduled__2023-06-28T10:20:00+00:00 [queued]>
+[2023-06-28T10:25:08.769+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.snowflake_sensor_task scheduled__2023-06-28T10:20:00+00:00 [queued]>
+[2023-06-28T10:25:08.770+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-28T10:25:08.805+0000] {taskinstance.py:1327} INFO - Executing <Task(SnowflakeStreamSensor): snowflake_sensor_task> on 2023-06-28 10:20:00+00:00
+[2023-06-28T10:25:08.818+0000] {standard_task_runner.py:57} INFO - Started process 2971 to run task
+[2023-06-28T10:25:08.827+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Loop', 'snowflake_sensor_task', 'scheduled__2023-06-28T10:20:00+00:00', '--job-id', '493', '--raw', '--subdir', 'DAGS_FOLDER/test_loop.py', '--cfg-path', '/tmp/tmpvg8krdcz']
+[2023-06-28T10:25:08.829+0000] {standard_task_runner.py:85} INFO - Job 493: Subtask snowflake_sensor_task
+[2023-06-28T10:25:08.945+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T10:20:00+00:00/task_id=snowflake_sensor_task permission to 509
+[2023-06-28T10:25:08.946+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T10:20:00+00:00/task_id=snowflake_sensor_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T10:20:00+00:00/task_id=snowflake_sensor_task'
+[2023-06-28T10:25:08.950+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Loop.snowflake_sensor_task scheduled__2023-06-28T10:20:00+00:00 [running]> on host a3cd9226e3f8
+[2023-06-28T10:25:09.124+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Loop' AIRFLOW_CTX_TASK_ID='snowflake_sensor_task' AIRFLOW_CTX_EXECUTION_DATE='2023-06-28T10:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-06-28T10:20:00+00:00'
+[2023-06-28T10:25:09.127+0000] {connection.py:287} INFO - Snowflake Connector for Python Version: 3.0.3, Python Version: 3.7.16, Platform: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-debian-11.7
+[2023-06-28T10:25:09.139+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/snowflake_sensor.py", line 18, in execute
+    conn = connect(conn_name=self.snowflake_connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/__init__.py", line 51, in Connect
+    return SnowflakeConnection(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/connection.py", line 304, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/connection.py", line 543, in connect
+    self.__config(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/connection.py", line 955, in __config
+    {"msg": "User is empty", "errno": ER_NO_USER},
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/errors.py", line 294, in errorhandler_wrapper
+    error_value,
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/errors.py", line 348, in hand_to_other_handler
+    connection.errorhandler(connection, cursor, error_class, error_value)
+  File "/home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/errors.py", line 231, in default_errorhandler
+    cursor=cursor,
+snowflake.connector.errors.ProgrammingError: 251005: 251005: User is empty
+[2023-06-28T10:25:09.155+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5_Loop, task_id=snowflake_sensor_task, execution_date=20230628T102000, start_date=20230628T102508, end_date=20230628T102509
+[2023-06-28T10:25:09.183+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 493 for task snowflake_sensor_task (251005: 251005: User is empty; 2971)
+[2023-06-28T10:25:09.242+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-28T10:25:09.308+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

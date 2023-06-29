@@ -1,0 +1,68 @@
+[2023-06-27T11:24:02.399+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice permission to 509
+[2023-06-27T11:24:02.401+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice'
+[2023-06-27T11:24:02.442+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice permission to 509
+[2023-06-27T11:24:02.444+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice'
+[2023-06-27T11:24:02.614+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.get_choice scheduled__2023-06-27T11:23:00+00:00 [queued]>
+[2023-06-27T11:24:02.625+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.get_choice scheduled__2023-06-27T11:23:00+00:00 [queued]>
+[2023-06-27T11:24:02.626+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-27T11:24:02.644+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): get_choice> on 2023-06-27 11:23:00+00:00
+[2023-06-27T11:24:02.650+0000] {standard_task_runner.py:57} INFO - Started process 100 to run task
+[2023-06-27T11:24:02.654+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Loop', 'get_choice', 'scheduled__2023-06-27T11:23:00+00:00', '--job-id', '248', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpcolik2rp']
+[2023-06-27T11:24:02.658+0000] {standard_task_runner.py:85} INFO - Job 248: Subtask get_choice
+[2023-06-27T11:24:02.721+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice permission to 509
+[2023-06-27T11:24:02.722+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice'
+[2023-06-27T11:24:02.725+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Loop.get_choice scheduled__2023-06-27T11:23:00+00:00 [running]> on host fdcb641f4a74
+[2023-06-27T11:24:02.877+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Loop' AIRFLOW_CTX_TASK_ID='get_choice' AIRFLOW_CTX_EXECUTION_DATE='2023-06-27T11:23:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-06-27T11:23:00+00:00'
+[2023-06-27T11:24:02.880+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-27T11:24:02.881+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt run-operation get_stream_value --args \'{                            "stream_name": "ed_cdc_stream",                             "dry_run": false}\'']
+[2023-06-27T11:24:02.893+0000] {subprocess.py:86} INFO - Output:
+[2023-06-27T11:24:06.638+0000] {subprocess.py:93} INFO - [0m11:24:06  Running with dbt=1.5.1
+[2023-06-27T11:24:14.727+0000] {subprocess.py:93} INFO - [0m11:24:14  Found 2 models, 0 tests, 0 snapshots, 0 analyses, 456 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-06-27T11:24:15.499+0000] {subprocess.py:93} INFO - [0m11:24:15  Encountered an error while running operation: Database Error
+[2023-06-27T11:24:15.500+0000] {subprocess.py:93} INFO -   001046 (22023): SQL compilation error:
+[2023-06-27T11:24:15.501+0000] {subprocess.py:93} INFO -   Invalid value ['ed_cdc_stream'] for function 'SYSTEM$STREAM_HAS_DATA', parameter 1: must be a valid stream name
+[2023-06-27T11:24:16.170+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-06-27T11:24:16.184+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-06-27T11:24:16.188+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5_Loop, task_id=get_choice, execution_date=20230627T112300, start_date=20230627T112402, end_date=20230627T112416
+[2023-06-27T11:24:16.203+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 248 for task get_choice (Bash command failed. The command returned a non-zero exit code 1.; 100)
+[2023-06-27T11:24:16.237+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-27T11:24:16.267+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-06-27T11:25:02.109+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice permission to 509
+[2023-06-27T11:25:02.110+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice'
+[2023-06-27T11:25:02.157+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice permission to 509
+[2023-06-27T11:25:02.158+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice'
+[2023-06-27T11:25:02.251+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.get_choice scheduled__2023-06-27T11:23:00+00:00 [queued]>
+[2023-06-27T11:25:02.427+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.get_choice scheduled__2023-06-27T11:23:00+00:00 [queued]>
+[2023-06-27T11:25:02.428+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-27T11:25:02.446+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): get_choice> on 2023-06-27 11:23:00+00:00
+[2023-06-27T11:25:02.453+0000] {standard_task_runner.py:57} INFO - Started process 677 to run task
+[2023-06-27T11:25:02.458+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Loop', 'get_choice', 'scheduled__2023-06-27T11:23:00+00:00', '--job-id', '255', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpf_szj5b3']
+[2023-06-27T11:25:02.461+0000] {standard_task_runner.py:85} INFO - Job 255: Subtask get_choice
+[2023-06-27T11:25:02.522+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice permission to 509
+[2023-06-27T11:25:02.523+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-27T11:23:00+00:00/task_id=get_choice'
+[2023-06-27T11:25:02.527+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Loop.get_choice scheduled__2023-06-27T11:23:00+00:00 [running]> on host fdcb641f4a74
+[2023-06-27T11:25:02.681+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Loop' AIRFLOW_CTX_TASK_ID='get_choice' AIRFLOW_CTX_EXECUTION_DATE='2023-06-27T11:23:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-06-27T11:23:00+00:00'
+[2023-06-27T11:25:02.684+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-27T11:25:02.685+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt run-operation get_stream_value --args \'{                            "stream_name": "ed_cdc_stream",                             "dry_run": false}\'']
+[2023-06-27T11:25:02.701+0000] {subprocess.py:86} INFO - Output:
+[2023-06-27T11:25:06.941+0000] {subprocess.py:93} INFO - [0m11:25:06  Running with dbt=1.5.1
+[2023-06-27T11:25:11.240+0000] {subprocess.py:93} INFO - [0m11:25:11  Found 2 models, 0 tests, 0 snapshots, 0 analyses, 456 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-06-27T11:25:12.189+0000] {subprocess.py:93} INFO - [0m11:25:12  Encountered an error while running operation: Database Error
+[2023-06-27T11:25:12.190+0000] {subprocess.py:93} INFO -   001046 (22023): SQL compilation error:
+[2023-06-27T11:25:12.190+0000] {subprocess.py:93} INFO -   Invalid value ['ed_cdc_stream'] for function 'SYSTEM$STREAM_HAS_DATA', parameter 1: must be a valid stream name
+[2023-06-27T11:25:12.926+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-06-27T11:25:12.939+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-06-27T11:25:12.945+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5_Loop, task_id=get_choice, execution_date=20230627T112300, start_date=20230627T112502, end_date=20230627T112512
+[2023-06-27T11:25:12.963+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 255 for task get_choice (Bash command failed. The command returned a non-zero exit code 1.; 677)
+[2023-06-27T11:25:13.036+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-27T11:25:13.071+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

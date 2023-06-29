@@ -12,7 +12,7 @@ default_args = {
 }
 
 
-with DAG('2_Test_Badge_5', default_args=default_args, schedule_interval='@once') as dag:
+with DAG('1_Project_Badge_5', default_args=default_args, schedule_interval='@once') as dag:
     task_seed = BashOperator(
         task_id='load_seed_todl_once',
         bash_command='cd /dbt && \
@@ -98,8 +98,4 @@ with DAG('2_Test_Badge_5', default_args=default_args, schedule_interval='@once')
         dag=dag
     )
 
-task_stage >> task_ed_pipeline_logs
-task_file_format >> task_ed_pipeline_logs
-task_seed >> task_ed_pipeline_logs
-task_ed_pipeline_logs >> task_pipe
-task_pipe >> task_stream
+[task_stage, task_file_format, task_seed] >> task_ed_pipeline_logs >> task_pipe >> task_stream

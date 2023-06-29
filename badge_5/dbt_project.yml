@@ -32,7 +32,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   badge_5:
     # Config indicated by + and applies to all files under models/example/
-    time_of_day:
-      +materialized: table
-    create_stage:
-      materialized : stage
+    ed_pipeline_logs:
+      materialized: table
+    toto_select:
+      materialized: table
+    time_of_day_lu:
+      materialized: table

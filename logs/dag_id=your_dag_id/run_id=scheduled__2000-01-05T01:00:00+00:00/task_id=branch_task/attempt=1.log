@@ -1,0 +1,22 @@
+[2023-06-26T11:18:01.322+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=your_dag_id/run_id=scheduled__2000-01-05T01:00:00+00:00/task_id=branch_task permission to 509
+[2023-06-26T11:18:01.324+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=your_dag_id/run_id=scheduled__2000-01-05T01:00:00+00:00/task_id=branch_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=your_dag_id/run_id=scheduled__2000-01-05T01:00:00+00:00/task_id=branch_task'
+[2023-06-26T11:18:01.364+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=your_dag_id/run_id=scheduled__2000-01-05T01:00:00+00:00/task_id=branch_task permission to 509
+[2023-06-26T11:18:01.365+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=your_dag_id/run_id=scheduled__2000-01-05T01:00:00+00:00/task_id=branch_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=your_dag_id/run_id=scheduled__2000-01-05T01:00:00+00:00/task_id=branch_task'
+[2023-06-26T11:18:01.559+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: your_dag_id.branch_task scheduled__2000-01-05T01:00:00+00:00 [queued]>
+[2023-06-26T11:18:01.571+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: your_dag_id.branch_task scheduled__2000-01-05T01:00:00+00:00 [queued]>
+[2023-06-26T11:18:01.572+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2023-06-26T11:18:01.592+0000] {taskinstance.py:1327} INFO - Executing <Task(BranchPythonOperator): branch_task> on 2000-01-05 01:00:00+00:00
+[2023-06-26T11:18:01.599+0000] {standard_task_runner.py:57} INFO - Started process 206 to run task
+[2023-06-26T11:18:01.604+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'your_dag_id', 'branch_task', 'scheduled__2000-01-05T01:00:00+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpo6a__yb7']
+[2023-06-26T11:18:01.607+0000] {standard_task_runner.py:85} INFO - Job 82: Subtask branch_task
+[2023-06-26T11:18:01.670+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=your_dag_id/run_id=scheduled__2000-01-05T01:00:00+00:00/task_id=branch_task permission to 509
+[2023-06-26T11:18:01.671+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=your_dag_id/run_id=scheduled__2000-01-05T01:00:00+00:00/task_id=branch_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=your_dag_id/run_id=scheduled__2000-01-05T01:00:00+00:00/task_id=branch_task'
+[2023-06-26T11:18:01.675+0000] {task_command.py:410} INFO - Running <TaskInstance: your_dag_id.branch_task scheduled__2000-01-05T01:00:00+00:00 [running]> on host dfc7c5882702
+[2023-06-26T11:18:01.832+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='you@email.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='your_dag_id' AIRFLOW_CTX_TASK_ID='branch_task' AIRFLOW_CTX_EXECUTION_DATE='2000-01-05T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2000-01-05T01:00:00+00:00'
+[2023-06-26T11:18:01.836+0000] {python.py:183} INFO - Done. Returned value was: skip_initial_task
+[2023-06-26T11:18:01.836+0000] {python.py:216} INFO - Branch callable return skip_initial_task
+[2023-06-26T11:18:01.837+0000] {skipmixin.py:161} INFO - Following branch skip_initial_task
+[2023-06-26T11:18:01.838+0000] {skipmixin.py:221} INFO - Skipping tasks ['initial_task']
+[2023-06-26T11:18:01.895+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=your_dag_id, task_id=branch_task, execution_date=20000105T010000, start_date=20230626T111801, end_date=20230626T111801
+[2023-06-26T11:18:02.101+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-26T11:18:02.180+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

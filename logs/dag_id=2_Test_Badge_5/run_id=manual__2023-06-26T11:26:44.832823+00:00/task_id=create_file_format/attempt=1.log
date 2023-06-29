@@ -1,0 +1,61 @@
+[2023-06-26T11:26:47.256+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_file_format permission to 509
+[2023-06-26T11:26:47.258+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_file_format permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_file_format'
+[2023-06-26T11:26:47.295+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_file_format permission to 509
+[2023-06-26T11:26:47.296+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_file_format permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_file_format'
+[2023-06-26T11:26:47.577+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5.create_file_format manual__2023-06-26T11:26:44.832823+00:00 [queued]>
+[2023-06-26T11:26:47.592+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5.create_file_format manual__2023-06-26T11:26:44.832823+00:00 [queued]>
+[2023-06-26T11:26:47.593+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-26T11:26:47.622+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): create_file_format> on 2023-06-26 11:26:44.832823+00:00
+[2023-06-26T11:26:47.634+0000] {standard_task_runner.py:57} INFO - Started process 75 to run task
+[2023-06-26T11:26:47.641+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5', 'create_file_format', 'manual__2023-06-26T11:26:44.832823+00:00', '--job-id', '94', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp7hyi1dw4']
+[2023-06-26T11:26:47.644+0000] {standard_task_runner.py:85} INFO - Job 94: Subtask create_file_format
+[2023-06-26T11:26:47.718+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_file_format permission to 509
+[2023-06-26T11:26:47.719+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_file_format permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5/run_id=manual__2023-06-26T11:26:44.832823+00:00/task_id=create_file_format'
+[2023-06-26T11:26:47.722+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5.create_file_format manual__2023-06-26T11:26:44.832823+00:00 [running]> on host dfc7c5882702
+[2023-06-26T11:26:47.929+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5' AIRFLOW_CTX_TASK_ID='create_file_format' AIRFLOW_CTX_EXECUTION_DATE='2023-06-26T11:26:44.832823+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-26T11:26:44.832823+00:00'
+[2023-06-26T11:26:47.932+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-26T11:26:47.934+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt &&             dbt run-operation create_file_format --args \'{                "file_format_name": "ff_json_logs",                 "file_format_type": "JSON",                 "strip_outer_array": true,                 "dry_run": false}\'']
+[2023-06-26T11:26:47.951+0000] {subprocess.py:86} INFO - Output:
+[2023-06-26T11:26:52.784+0000] {subprocess.py:93} INFO - [0m11:26:52  Running with dbt=1.5.1
+[2023-06-26T11:27:00.785+0000] {subprocess.py:93} INFO - [0m11:27:00  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-06-26T11:27:00.785+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2023-06-26T11:27:00.786+0000] {subprocess.py:93} INFO - - models.badge_5.time_of_day
+[2023-06-26T11:27:00.787+0000] {subprocess.py:93} INFO - - models.badge_5.create_stage
+[2023-06-26T11:27:00.839+0000] {subprocess.py:93} INFO - [0m11:27:00  Encountered an error:
+[2023-06-26T11:27:00.840+0000] {subprocess.py:93} INFO - Found a cycle: model.badge_5.logs_enhanced
+[2023-06-26T11:27:00.842+0000] {subprocess.py:93} INFO - [0m11:27:00  Traceback (most recent call last):
+[2023-06-26T11:27:00.843+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 86, in wrapper
+[2023-06-26T11:27:00.843+0000] {subprocess.py:93} INFO -     result, success = func(*args, **kwargs)
+[2023-06-26T11:27:00.844+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 71, in wrapper
+[2023-06-26T11:27:00.845+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:27:00.846+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 142, in wrapper
+[2023-06-26T11:27:00.846+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:27:00.847+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 168, in wrapper
+[2023-06-26T11:27:00.848+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:27:00.849+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 215, in wrapper
+[2023-06-26T11:27:00.850+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:27:00.851+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/requires.py", line 250, in wrapper
+[2023-06-26T11:27:00.852+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2023-06-26T11:27:00.853+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/cli/main.py", line 594, in run_operation
+[2023-06-26T11:27:00.853+0000] {subprocess.py:93} INFO -     results = task.run()
+[2023-06-26T11:27:00.854+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/task/run_operation.py", line 45, in run
+[2023-06-26T11:27:00.855+0000] {subprocess.py:93} INFO -     self.compile_manifest()
+[2023-06-26T11:27:00.855+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/task/base.py", line 173, in compile_manifest
+[2023-06-26T11:27:00.856+0000] {subprocess.py:93} INFO -     self.graph = compiler.compile(self.manifest)
+[2023-06-26T11:27:00.857+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/compilation.py", line 483, in compile
+[2023-06-26T11:27:00.857+0000] {subprocess.py:93} INFO -     self.link_graph(linker, manifest, add_test_edges)
+[2023-06-26T11:27:00.858+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/dbt/compilation.py", line 421, in link_graph
+[2023-06-26T11:27:00.859+0000] {subprocess.py:93} INFO -     raise RuntimeError("Found a cycle: {}".format(cycle))
+[2023-06-26T11:27:00.859+0000] {subprocess.py:93} INFO - RuntimeError: Found a cycle: model.badge_5.logs_enhanced
+[2023-06-26T11:27:00.860+0000] {subprocess.py:93} INFO - 
+[2023-06-26T11:27:01.502+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2023-06-26T11:27:01.519+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2023-06-26T11:27:01.524+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5, task_id=create_file_format, execution_date=20230626T112644, start_date=20230626T112647, end_date=20230626T112701
+[2023-06-26T11:27:01.542+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 94 for task create_file_format (Bash command failed. The command returned a non-zero exit code 2.; 75)
+[2023-06-26T11:27:01.573+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-26T11:27:01.596+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

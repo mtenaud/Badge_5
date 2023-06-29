@@ -1,0 +1,28 @@
+[2023-06-27T14:48:37.854+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:48:36.176370+00:00/task_id=create_file_format permission to 509
+[2023-06-27T14:48:37.855+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:48:36.176370+00:00/task_id=create_file_format permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:48:36.176370+00:00/task_id=create_file_format'
+[2023-06-27T14:48:37.897+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:48:36.176370+00:00/task_id=create_file_format permission to 509
+[2023-06-27T14:48:37.898+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:48:36.176370+00:00/task_id=create_file_format permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:48:36.176370+00:00/task_id=create_file_format'
+[2023-06-27T14:48:38.094+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Setup.create_file_format manual__2023-06-27T14:48:36.176370+00:00 [queued]>
+[2023-06-27T14:48:38.105+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Setup.create_file_format manual__2023-06-27T14:48:36.176370+00:00 [queued]>
+[2023-06-27T14:48:38.106+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-27T14:48:38.125+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): create_file_format> on 2023-06-27 14:48:36.176370+00:00
+[2023-06-27T14:48:38.131+0000] {standard_task_runner.py:57} INFO - Started process 2912 to run task
+[2023-06-27T14:48:38.135+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Setup', 'create_file_format', 'manual__2023-06-27T14:48:36.176370+00:00', '--job-id', '312', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpmd9oj40i']
+[2023-06-27T14:48:38.138+0000] {standard_task_runner.py:85} INFO - Job 312: Subtask create_file_format
+[2023-06-27T14:48:38.195+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:48:36.176370+00:00/task_id=create_file_format permission to 509
+[2023-06-27T14:48:38.196+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:48:36.176370+00:00/task_id=create_file_format permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-27T14:48:36.176370+00:00/task_id=create_file_format'
+[2023-06-27T14:48:38.199+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Setup.create_file_format manual__2023-06-27T14:48:36.176370+00:00 [running]> on host eb22b15bae36
+[2023-06-27T14:48:38.350+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Setup' AIRFLOW_CTX_TASK_ID='create_file_format' AIRFLOW_CTX_EXECUTION_DATE='2023-06-27T14:48:36.176370+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-27T14:48:36.176370+00:00'
+[2023-06-27T14:48:38.353+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-27T14:48:38.354+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt run-operation create_file_format --args \'{                            "file_format_name": "ff_json_logs",                             "file_format_type": "JSON",                             "strip_outer_array": true,                             "dry_run": false}\'']
+[2023-06-27T14:48:38.367+0000] {subprocess.py:86} INFO - Output:
+[2023-06-27T14:48:42.097+0000] {subprocess.py:93} INFO - [0m14:48:42  Running with dbt=1.5.1
+[2023-06-27T14:48:49.896+0000] {subprocess.py:93} INFO - [0m14:48:49  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-06-27T14:48:49.897+0000] {subprocess.py:93} INFO - There are 1 unused configuration paths:
+[2023-06-27T14:48:49.898+0000] {subprocess.py:93} INFO - - models.badge_5.time_of_day_lu
+[2023-06-27T14:48:50.026+0000] {subprocess.py:93} INFO - [0m14:48:50  Found 3 models, 0 tests, 0 snapshots, 0 analyses, 456 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-06-27T14:48:54.382+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-06-27T14:48:54.418+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=2_Test_Badge_5_Setup, task_id=create_file_format, execution_date=20230627T144836, start_date=20230627T144838, end_date=20230627T144854
+[2023-06-27T14:48:54.475+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-27T14:48:54.516+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check

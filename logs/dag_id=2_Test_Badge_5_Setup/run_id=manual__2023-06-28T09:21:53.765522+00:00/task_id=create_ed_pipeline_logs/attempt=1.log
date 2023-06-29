@@ -1,0 +1,36 @@
+[2023-06-28T09:22:16.228+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-28T09:21:53.765522+00:00/task_id=create_ed_pipeline_logs permission to 509
+[2023-06-28T09:22:16.230+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-28T09:21:53.765522+00:00/task_id=create_ed_pipeline_logs permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-28T09:21:53.765522+00:00/task_id=create_ed_pipeline_logs'
+[2023-06-28T09:22:16.301+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-28T09:21:53.765522+00:00/task_id=create_ed_pipeline_logs permission to 509
+[2023-06-28T09:22:16.302+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-28T09:21:53.765522+00:00/task_id=create_ed_pipeline_logs permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-28T09:21:53.765522+00:00/task_id=create_ed_pipeline_logs'
+[2023-06-28T09:22:16.505+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Setup.create_ed_pipeline_logs manual__2023-06-28T09:21:53.765522+00:00 [queued]>
+[2023-06-28T09:22:16.516+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Setup.create_ed_pipeline_logs manual__2023-06-28T09:21:53.765522+00:00 [queued]>
+[2023-06-28T09:22:16.516+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-28T09:22:16.536+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): create_ed_pipeline_logs> on 2023-06-28 09:21:53.765522+00:00
+[2023-06-28T09:22:16.542+0000] {standard_task_runner.py:57} INFO - Started process 393 to run task
+[2023-06-28T09:22:16.546+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Setup', 'create_ed_pipeline_logs', 'manual__2023-06-28T09:21:53.765522+00:00', '--job-id', '429', '--raw', '--subdir', 'DAGS_FOLDER/test_setup.py', '--cfg-path', '/tmp/tmpinnvt4lt']
+[2023-06-28T09:22:16.549+0000] {standard_task_runner.py:85} INFO - Job 429: Subtask create_ed_pipeline_logs
+[2023-06-28T09:22:16.612+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-28T09:21:53.765522+00:00/task_id=create_ed_pipeline_logs permission to 509
+[2023-06-28T09:22:16.613+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-28T09:21:53.765522+00:00/task_id=create_ed_pipeline_logs permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Setup/run_id=manual__2023-06-28T09:21:53.765522+00:00/task_id=create_ed_pipeline_logs'
+[2023-06-28T09:22:16.616+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Setup.create_ed_pipeline_logs manual__2023-06-28T09:21:53.765522+00:00 [running]> on host a3cd9226e3f8
+[2023-06-28T09:22:16.791+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Setup' AIRFLOW_CTX_TASK_ID='create_ed_pipeline_logs' AIRFLOW_CTX_EXECUTION_DATE='2023-06-28T09:21:53.765522+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-28T09:21:53.765522+00:00'
+[2023-06-28T09:22:16.795+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-28T09:22:16.797+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt run --model ed_pipeline_logs']
+[2023-06-28T09:22:16.813+0000] {subprocess.py:86} INFO - Output:
+[2023-06-28T09:22:20.731+0000] {subprocess.py:93} INFO - [0m09:22:20  Running with dbt=1.5.1
+[2023-06-28T09:22:28.246+0000] {subprocess.py:93} INFO - [0m09:22:28  Encountered an error:
+[2023-06-28T09:22:28.246+0000] {subprocess.py:93} INFO - Compilation Error
+[2023-06-28T09:22:28.247+0000] {subprocess.py:93} INFO -   dbt found two macros named "create_pipe" in the project "badge_5".
+[2023-06-28T09:22:28.248+0000] {subprocess.py:93} INFO -    To fix this error, rename or remove one of the following macros:
+[2023-06-28T09:22:28.249+0000] {subprocess.py:93} INFO -       - macros/clean.sql
+[2023-06-28T09:22:28.249+0000] {subprocess.py:93} INFO -       - macros/create_pipe.sql
+[2023-06-28T09:22:29.083+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2023-06-28T09:22:29.096+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2023-06-28T09:22:29.100+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5_Setup, task_id=create_ed_pipeline_logs, execution_date=20230628T092153, start_date=20230628T092216, end_date=20230628T092229
+[2023-06-28T09:22:29.120+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 429 for task create_ed_pipeline_logs (Bash command failed. The command returned a non-zero exit code 2.; 393)
+[2023-06-28T09:22:29.147+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-28T09:22:29.184+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

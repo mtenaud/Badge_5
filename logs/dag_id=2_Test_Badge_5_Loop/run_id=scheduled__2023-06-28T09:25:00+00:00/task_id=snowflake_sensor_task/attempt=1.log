@@ -1,0 +1,24 @@
+[2023-06-28T09:26:06.708+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T09:25:00+00:00/task_id=snowflake_sensor_task permission to 509
+[2023-06-28T09:26:06.710+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T09:25:00+00:00/task_id=snowflake_sensor_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T09:25:00+00:00/task_id=snowflake_sensor_task'
+[2023-06-28T09:26:06.753+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T09:25:00+00:00/task_id=snowflake_sensor_task permission to 509
+[2023-06-28T09:26:06.754+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T09:25:00+00:00/task_id=snowflake_sensor_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T09:25:00+00:00/task_id=snowflake_sensor_task'
+[2023-06-28T09:26:06.808+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.snowflake_sensor_task scheduled__2023-06-28T09:25:00+00:00 [queued]>
+[2023-06-28T09:26:06.824+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_Test_Badge_5_Loop.snowflake_sensor_task scheduled__2023-06-28T09:25:00+00:00 [queued]>
+[2023-06-28T09:26:06.824+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-28T09:26:06.844+0000] {taskinstance.py:1327} INFO - Executing <Task(SnowflakeStreamSensor): snowflake_sensor_task> on 2023-06-28 09:25:00+00:00
+[2023-06-28T09:26:06.851+0000] {standard_task_runner.py:57} INFO - Started process 1278 to run task
+[2023-06-28T09:26:06.856+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_Test_Badge_5_Loop', 'snowflake_sensor_task', 'scheduled__2023-06-28T09:25:00+00:00', '--job-id', '442', '--raw', '--subdir', 'DAGS_FOLDER/test_loop.py', '--cfg-path', '/tmp/tmpxoulu9o0']
+[2023-06-28T09:26:06.857+0000] {standard_task_runner.py:85} INFO - Job 442: Subtask snowflake_sensor_task
+[2023-06-28T09:26:06.923+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T09:25:00+00:00/task_id=snowflake_sensor_task permission to 509
+[2023-06-28T09:26:06.924+0000] {logging_mixin.py:149} INFO - Failed to change /opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T09:25:00+00:00/task_id=snowflake_sensor_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=2_Test_Badge_5_Loop/run_id=scheduled__2023-06-28T09:25:00+00:00/task_id=snowflake_sensor_task'
+[2023-06-28T09:26:06.928+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_Test_Badge_5_Loop.snowflake_sensor_task scheduled__2023-06-28T09:25:00+00:00 [running]> on host a3cd9226e3f8
+[2023-06-28T09:26:07.064+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_Test_Badge_5_Loop' AIRFLOW_CTX_TASK_ID='snowflake_sensor_task' AIRFLOW_CTX_EXECUTION_DATE='2023-06-28T09:25:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-06-28T09:25:00+00:00'
+[2023-06-28T09:26:07.065+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1188, in execute
+    raise NotImplementedError()
+NotImplementedError
+[2023-06-28T09:26:07.076+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=2_Test_Badge_5_Loop, task_id=snowflake_sensor_task, execution_date=20230628T092500, start_date=20230628T092606, end_date=20230628T092607
+[2023-06-28T09:26:07.091+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 442 for task snowflake_sensor_task (; 1278)
+[2023-06-28T09:26:07.113+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-28T09:26:07.155+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

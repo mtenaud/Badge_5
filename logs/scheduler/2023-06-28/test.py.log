@@ -1,0 +1,171 @@
+[2023-06-28T07:45:48.561+0000] {processor.py:157} INFO - Started process (PID=31) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:45:48.563+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:45:48.565+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:45:48.564+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:45:48.621+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:45:48.628+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Setup', '2_Test_Badge_5_Loop']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:45:48.737+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:45:48.736+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:45:48.775+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:45:48.774+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:44:00+00:00, run_after=2023-06-28T07:45:00+00:00
+[2023-06-28T07:45:48.780+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:45:48.779+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:45:48.809+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.253 seconds
+[2023-06-28T07:46:19.296+0000] {processor.py:157} INFO - Started process (PID=97) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:46:19.298+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:46:19.301+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:46:19.301+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:46:19.380+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:46:19.385+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Loop', '2_Test_Badge_5_Setup']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:46:19.446+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:46:19.445+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:46:19.493+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:46:19.493+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:45:00+00:00, run_after=2023-06-28T07:46:00+00:00
+[2023-06-28T07:46:19.498+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:46:19.498+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:46:19.529+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.240 seconds
+[2023-06-28T07:46:50.133+0000] {processor.py:157} INFO - Started process (PID=163) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:46:50.134+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:46:50.135+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:46:50.135+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:46:50.168+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:46:50.171+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Setup', '2_Test_Badge_5_Loop']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:46:50.202+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:46:50.202+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:46:50.336+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:46:50.336+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:45:00+00:00, run_after=2023-06-28T07:46:00+00:00
+[2023-06-28T07:46:50.340+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:46:50.340+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:46:50.359+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.230 seconds
+[2023-06-28T07:47:20.514+0000] {processor.py:157} INFO - Started process (PID=229) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:47:20.515+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:47:20.517+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:47:20.517+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:47:20.558+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:47:20.561+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Setup', '2_Test_Badge_5_Loop']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:47:20.601+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:47:20.601+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:47:20.641+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:47:20.641+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:46:00+00:00, run_after=2023-06-28T07:47:00+00:00
+[2023-06-28T07:47:20.646+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:47:20.646+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:47:20.674+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.165 seconds
+[2023-06-28T07:47:50.868+0000] {processor.py:157} INFO - Started process (PID=295) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:47:50.869+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:47:50.871+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:47:50.871+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:47:50.908+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:47:50.911+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Setup', '2_Test_Badge_5_Loop']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:47:50.943+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:47:50.943+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:47:50.979+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:47:50.979+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:46:00+00:00, run_after=2023-06-28T07:47:00+00:00
+[2023-06-28T07:47:50.983+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:47:50.983+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:47:51.005+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.141 seconds
+[2023-06-28T07:48:21.235+0000] {processor.py:157} INFO - Started process (PID=361) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:48:21.236+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:48:21.237+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:48:21.237+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:48:21.271+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:48:21.274+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Setup', '2_Test_Badge_5_Loop']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:48:21.305+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:48:21.304+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:48:21.335+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:48:21.334+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:47:00+00:00, run_after=2023-06-28T07:48:00+00:00
+[2023-06-28T07:48:21.339+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:48:21.339+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:48:21.360+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.128 seconds
+[2023-06-28T07:48:51.588+0000] {processor.py:157} INFO - Started process (PID=427) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:48:51.589+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:48:51.590+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:48:51.590+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:48:51.626+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:48:51.628+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Loop', '2_Test_Badge_5_Setup']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:48:51.656+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:48:51.656+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:48:51.688+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:48:51.688+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:47:00+00:00, run_after=2023-06-28T07:48:00+00:00
+[2023-06-28T07:48:51.692+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:48:51.692+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:48:51.711+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.125 seconds
+[2023-06-28T07:49:22.026+0000] {processor.py:157} INFO - Started process (PID=493) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:49:22.027+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:49:22.028+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:49:22.028+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:49:22.061+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:49:22.064+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Setup', '2_Test_Badge_5_Loop']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:49:22.092+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:49:22.092+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:49:22.121+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:49:22.121+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:48:00+00:00, run_after=2023-06-28T07:49:00+00:00
+[2023-06-28T07:49:22.125+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:49:22.124+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:49:22.145+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.123 seconds
+[2023-06-28T07:49:52.465+0000] {processor.py:157} INFO - Started process (PID=559) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:49:52.466+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:49:52.467+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:49:52.467+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:49:52.507+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:49:52.510+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Loop', '2_Test_Badge_5_Setup']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:49:52.540+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:49:52.540+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:49:52.573+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:49:52.572+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:48:00+00:00, run_after=2023-06-28T07:49:00+00:00
+[2023-06-28T07:49:52.577+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:49:52.577+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:49:52.599+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.137 seconds
+[2023-06-28T07:50:23.120+0000] {processor.py:157} INFO - Started process (PID=625) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:50:23.121+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:50:23.122+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:50:23.122+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:50:23.157+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:50:23.160+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Setup', '2_Test_Badge_5_Loop']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:50:23.190+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:50:23.190+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:50:23.224+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:50:23.224+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:49:00+00:00, run_after=2023-06-28T07:50:00+00:00
+[2023-06-28T07:50:23.228+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:50:23.228+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:50:23.250+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.133 seconds
+[2023-06-28T07:50:53.605+0000] {processor.py:157} INFO - Started process (PID=691) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:50:53.607+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:50:53.608+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:50:53.608+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:50:53.644+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:50:53.646+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Loop', '2_Test_Badge_5_Setup']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:50:53.675+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:50:53.675+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:50:53.705+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:50:53.704+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:49:00+00:00, run_after=2023-06-28T07:50:00+00:00
+[2023-06-28T07:50:53.709+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:50:53.709+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:50:53.730+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.128 seconds
+[2023-06-28T07:51:23.964+0000] {processor.py:157} INFO - Started process (PID=757) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:51:23.965+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:51:23.966+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:51:23.966+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:51:23.999+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:51:24.001+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Setup', '2_Test_Badge_5_Loop']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:51:24.029+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:51:24.029+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:51:24.058+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:51:24.058+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:50:00+00:00, run_after=2023-06-28T07:51:00+00:00
+[2023-06-28T07:51:24.062+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:51:24.061+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:51:24.082+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.121 seconds
+[2023-06-28T07:51:54.380+0000] {processor.py:157} INFO - Started process (PID=823) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:51:54.381+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:51:54.382+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:51:54.382+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:51:54.417+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:51:54.419+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Loop', '2_Test_Badge_5_Setup']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:51:54.452+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:51:54.452+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:51:54.489+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:51:54.488+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:50:00+00:00, run_after=2023-06-28T07:51:00+00:00
+[2023-06-28T07:51:54.493+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:51:54.493+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:51:54.518+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.141 seconds
+[2023-06-28T07:52:24.764+0000] {processor.py:157} INFO - Started process (PID=889) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:52:24.765+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:52:24.766+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:52:24.765+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:52:24.798+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:52:24.800+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Loop', '2_Test_Badge_5_Setup']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:52:24.830+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:52:24.830+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:52:24.863+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:52:24.863+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:51:00+00:00, run_after=2023-06-28T07:52:00+00:00
+[2023-06-28T07:52:24.867+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:52:24.867+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:52:24.889+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.129 seconds
+[2023-06-28T07:52:55.200+0000] {processor.py:157} INFO - Started process (PID=955) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:52:55.201+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:52:55.203+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:52:55.202+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:52:55.235+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:52:55.238+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Setup', '2_Test_Badge_5_Loop']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:52:55.267+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:52:55.267+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:52:55.297+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:52:55.297+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:51:00+00:00, run_after=2023-06-28T07:52:00+00:00
+[2023-06-28T07:52:55.301+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:52:55.301+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:52:55.322+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.124 seconds
+[2023-06-28T07:53:25.633+0000] {processor.py:157} INFO - Started process (PID=1021) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:53:25.634+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:53:25.636+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:53:25.636+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:53:25.669+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:53:25.672+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Loop', '2_Test_Badge_5_Setup']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:53:25.702+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:53:25.702+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:53:25.732+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:53:25.732+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:52:00+00:00, run_after=2023-06-28T07:53:00+00:00
+[2023-06-28T07:53:25.735+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:53:25.735+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:53:25.756+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.126 seconds
+[2023-06-28T07:53:56.148+0000] {processor.py:157} INFO - Started process (PID=1087) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:53:56.150+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:53:56.151+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:53:56.151+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:53:56.189+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:53:56.192+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Loop', '2_Test_Badge_5_Setup']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:53:56.225+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:53:56.225+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:53:56.264+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:53:56.264+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:52:00+00:00, run_after=2023-06-28T07:53:00+00:00
+[2023-06-28T07:53:56.270+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:53:56.270+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:53:56.304+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.161 seconds
+[2023-06-28T07:54:26.451+0000] {processor.py:157} INFO - Started process (PID=1153) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:54:26.453+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:54:26.455+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:54:26.455+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:54:26.505+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:54:26.510+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Setup', '2_Test_Badge_5_Loop']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:54:26.543+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:54:26.543+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:54:26.578+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:54:26.578+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:53:00+00:00, run_after=2023-06-28T07:54:00+00:00
+[2023-06-28T07:54:26.582+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:54:26.582+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:54:26.605+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.157 seconds
+[2023-06-28T07:54:56.910+0000] {processor.py:157} INFO - Started process (PID=1219) to work on /opt/airflow/dags/test.py
+[2023-06-28T07:54:56.911+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2023-06-28T07:54:56.912+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:54:56.912+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2023-06-28T07:54:56.945+0000] {logging_mixin.py:149} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py:429 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-06-28T07:54:56.948+0000] {processor.py:836} INFO - DAG(s) dict_keys(['2_Test_Badge_5_Setup', '2_Test_Badge_5_Loop']) retrieved from /opt/airflow/dags/test.py
+[2023-06-28T07:54:56.978+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:54:56.978+0000] {dag.py:2726} INFO - Sync 2 DAGs
+[2023-06-28T07:54:57.008+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:54:57.008+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Loop to 2023-06-28T07:53:00+00:00, run_after=2023-06-28T07:54:00+00:00
+[2023-06-28T07:54:57.013+0000] {logging_mixin.py:149} INFO - [2023-06-28T07:54:57.012+0000] {dag.py:3490} INFO - Setting next_dagrun for 2_Test_Badge_5_Setup to None, run_after=None
+[2023-06-28T07:54:57.032+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.125 seconds
